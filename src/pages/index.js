@@ -160,7 +160,7 @@ const Index = () => (
                       than noon. Tickets must be picked up in the management
                       office (200 Crescent Court, Suite 250) no later than 4
                       p.m. on Friday. The concierge accepts all major credit
-                      cards, debit cards, and company checks.
+                      cards, debit cards, and company checks for more information call (972) 770-4045.
                     </Box>
                     <Button
                       color="white"

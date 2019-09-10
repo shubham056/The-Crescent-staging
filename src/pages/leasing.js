@@ -27,7 +27,7 @@ const Leasing = () => (
         <Content>
           <Box maxWidth={680}>
             <Heading fontSize={[4, "36px"]} mb={[3, "40px"]}>
-              <span>Retail</span> and hospitality
+              The <span>Perfect place</span> to office
             </Heading>
             <Box mb={[3, "40px"]}>
               Set in a crescent-shaped contour, The Crescent® is designed to

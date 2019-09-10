@@ -107,20 +107,10 @@ const Amenities = () => (
       <Box maxWidth={1024} color="white">
         <Box as="h2" mt={0} fontSize={[4, "36px"]}>CONCIERGE</Box>
         <Box as="p">
-          The Crescent’s concierge service is pleased to assist you with
-          information regarding hotels, restaurants, and entertainment. They can
-          assist you with most ticket orders and requests via phone or email.
-          For all orders that need to be delivered to the building, please order
-          no later than 2 p.m. on Thursdays for delivery each Friday no later
-          than noon. Tickets must be picked up in the management office (200
-          Crescent Court, Suite 250) no later than 4 p.m. on Friday. The
-          concierge accepts all major credit cards, debit cards, and company
-          checks. For more information call (972) 770-4045, email
-          services@conciergeconnection.org, or for the full discount ticket
-          listing, visit{" "}
-          <Box as="a" color="white" href="http://texasconciergeconnection.com/">
+          The Crescent’s concierge service is pleased to assist you with information regarding hotels, restaurants, and entertainment. They can assist you with most ticket orders and requests via phone or email. For all orders that need to be delivered to the building, please order no later than 2 p.m. on Thursdays for delivery each Friday no later than noon. Tickets must be picked up in the management office (200 Crescent Court, Suite 250) no later than 4 p.m. on Friday. The concierge accepts all major credit cards, debit cards, and company checks. For more information call (972) 770-4045.
+          {/* <Box as="a" color="white" href="http://texasconciergeconnection.com/">
             www.texasconciergeconnection.com
-          </Box>.
+          </Box>. */}
         </Box>
       </Box>
     </Box>

@@ -48,13 +48,13 @@ function Header() {
           </Link>
           <Box display={["none", null, "block"]}>
             <Social>
-              <SocialItem href="https://www.facebook.com/" target="_blank">
+              <SocialItem href="https://www.facebook.com/TheCrescentDallas/" target="_blank">
                 <StyledFacebookF color={open ? `white` : `primary`} />
               </SocialItem>
-              <SocialItem href="https://www.instagram.com/" target="_blank">
+              <SocialItem href="https://www.instagram.com/thecrescentdallas" target="_blank">
                 <StyledInstagram color={open ? `white` : `primary`} />
               </SocialItem>
-              <SocialItem href="https://www.vimeo.com/" target="_blank">
+              <SocialItem href="https://vimeo.com/channels/thecrescent" target="_blank">
                 <StyledVimeoV color={open ? `white` : `primary`} />
               </SocialItem>
             </Social>
@@ -136,8 +136,8 @@ function Header() {
         <Container>
           <Box display="flex" flexWrap="wrap" justifyContent="space-between">
             <Privacy to="/privacy-policy" color="white">
-              Privacy Policy
-            </Privacy>
+            Corporate Policies
+            </Privacy>        
             <Box color="white">©The Crescent. All Rights Reserved 2019</Box>
           </Box>
         </Container>
