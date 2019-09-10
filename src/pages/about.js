@@ -194,14 +194,14 @@ function About() {
           </Box>
         </Box>
       </Container>
-      {/* <Box
+      <Box
         backgroundImage={`url(${team})`}
         backgroundRepeat="no-repeat"
         backgroundSize="cover"
         backgroundPosition="center"
         width={1}
         minHeight={[400, 800]}
-      /> */}
+      />
       <Container>
         <Box py={5}>
           <Heading as="h2" mb={0} fontSize={[4, "36px"]}>
@@ -238,7 +238,7 @@ function About() {
               </p>
             </Box>
           </Content>
-          <Image style={{backgroundPosition:"right center"}} src={thinkSustainable} />
+          <Image src={thinkSustainable} />
         </ContentImage>
       </Box>
       <Box overflow="hidden">

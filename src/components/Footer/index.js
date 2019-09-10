@@ -61,22 +61,19 @@ const Footer = ({ siteTitle, nav }) => {
             flexWrap="wrap"
           >
             <Box>
-              {/* <StyledLink color="grays.0" to="/http://www.thecrescent.com/corporate-policies">
-               Corporate Policies
-              </StyledLink> */}
-               <a className="eeMRgc" target="_blank" href="http://www.thecrescent.com/corporate-policies"  style={{color:"#A7A9AC"}}>
-            Corporate Policies
-            </a>
+              <StyledLink color="grays.0" to="/Privacy-policy">
+                Privacy Policy
+              </StyledLink>
             </Box>
             <Box>
               <Social>
-                <SocialItem href="https://www.facebook.com/TheCrescentDallas/" target="_blank">
+                <SocialItem href="https://www.facebook.com/" target="_blank">
                   <StyledFacebookF color="grays.1" />
                 </SocialItem>
-                <SocialItem href="https://www.instagram.com/thecrescentdallas" target="_blank">
+                <SocialItem href="https://www.instagram.com/" target="_blank">
                   <StyledInstagram color="grays.1" />
                 </SocialItem>
-                <SocialItem href="https://vimeo.com/channels/thecrescent" target="_blank">
+                <SocialItem href="https://www.vimeo.com/" target="_blank">
                   <StyledVimeoV color="grays.1" />
                 </SocialItem>
               </Social>
