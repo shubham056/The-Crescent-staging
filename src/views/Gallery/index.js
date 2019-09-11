@@ -7,7 +7,7 @@ function Gallery({ images, ...rest }) {
   return (
     <Box display="flex" flexWrap="wrap" {...rest}>
       {images.map((src, index) => (
-        <ImageWrap key={index} width={[1, 1 / 3, 1 / 5]}>
+        <ImageWrap key={index} width={[1, 1 / 3, 1 / 4]}>
           <Image backgroundImage={`url(${src})`} />
         </ImageWrap>
       ))}

@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
 import { Container, Row, Col } from "styled-bootstrap-grid";
 
 // Components
@@ -32,7 +31,6 @@ function News() {
                 borderRight="1px solid"
                 borderRightColor="grays.1"
                 mb={[5, 0]}
-               
               />
             </Col>
             <Col col={9} md={10} xl={11}>
@@ -42,7 +40,7 @@ function News() {
                     <Heading lineHeight="1" fontSize={[4, "36px"]} mb={4}>
                       <span>News</span>
                     </Heading>
-                    <NewsList 
+                    <NewsList
                       mb={5}
                       news={[
                         {

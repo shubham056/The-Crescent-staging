@@ -68,9 +68,10 @@ function Header() {
                   </Icon>
                   <Text>
                     <Box color={open ? `white` : `grays.0`}>
+                    <a style={{color:"#A7A9AC"}} href="https://www.ng1.angusanywhere.com/Tenant/default.aspx?CompanyName=69941&WebsiteName=Main" target="_blank">
                       Customer
                       <br />
-                      service
+                      service</a>
                     </Box>
                   </Text>
                 </IconText>
