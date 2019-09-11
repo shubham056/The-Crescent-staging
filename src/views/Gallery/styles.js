@@ -11,4 +11,5 @@ export const Image = styled(Box)`
 
 export const ImageWrap = styled(Box)`
   padding: 0.3125rem;
+  
 `;

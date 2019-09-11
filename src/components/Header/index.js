@@ -83,9 +83,11 @@ function Header() {
                   </Icon>
                   <Text>
                     <Box color={open ? `white` : `grays.0`}>
+                    <a style={{color:"#A7A9AC"}} href="parking-validation" target="_blank">
                       Parking
                       <br />
                       validation
+                      </a>
                     </Box>
                   </Text>
                 </IconText>

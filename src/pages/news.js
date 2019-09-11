@@ -32,7 +32,6 @@ function News() {
                 borderRight="1px solid"
                 borderRightColor="grays.1"
                 mb={[5, 0]}
-               
               />
             </Col>
             <Col col={9} md={10} xl={11}>

@@ -48,7 +48,7 @@ function Gallery() {
           </Heading>
         </Box>
       </Container>
-      <GalleryV images={images} p="5px" />
+      <GalleryV  images={images} p="5px" />
     </Layout>
   );
 }
