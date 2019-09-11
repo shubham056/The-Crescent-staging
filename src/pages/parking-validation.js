@@ -1,5 +1,4 @@
 import React from "react";
-import { MobilePDFReader } from 'react-read-pdf';
 import ParkingMapPdf from './temp/sample.pdf';
 
 function Parking() {
