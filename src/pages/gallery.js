@@ -1,5 +1,5 @@
 import React from "react";
-
+import { graphql } from "gatsby"
 import { Container } from "styled-bootstrap-grid";
 
 // Components
@@ -33,10 +33,11 @@ const images = [
   image3,
   image4,
   image1,
-  image2,
+  image2
 ];
 
-function Gallery() {
+function Gallery({data}) {
+  const newGallery = data.allStrapiGalleries.edges.map(res=>res.node.crescent_gallery.publicURL)
   return (
     <Layout>
       <SEO title="Location" />
@@ -48,9 +49,24 @@ function Gallery() {
           </Heading>
         </Box>
       </Container>
-      <GalleryV  images={images} p="5px" />
+      <GalleryV  images={(typeof newGallery !== 'undefined' && newGallery.length > 0)?newGallery:images} p="5px" />
+    
     </Layout>
   );
 }
 
 export default Gallery;
+
+export const PageQuery = graphql`
+  {
+    allStrapiGalleries {
+      edges {
+        node {
+          crescent_gallery {
+            publicURL
+          }
+        }
+      }
+    }
+  }
+`
