@@ -126,4 +126,10 @@ export const GlobalStyle = createGlobalStyle`
   .slick-arrow.slick-hidden {
     display: none;
   }
+  .ReactModelImage{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 280px;
+  }
 `;
