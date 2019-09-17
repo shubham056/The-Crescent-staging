@@ -110,7 +110,7 @@ function CardSlider({ onClick, data, ...rest }) {
             px={2}
             key={title}
             src={src}
-            title={(title.length<18)?title.substring(0,18):title.substring(0,18)+"..."}
+            title={(title.length<17)?title.substring(0,17):title.substring(0,17)+"..."}
             desc={(desc.length<86) ? desc.substring(0,86) : desc.substring(0,86)+"..."}
             onClick={onClick}
           />
