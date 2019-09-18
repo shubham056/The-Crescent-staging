@@ -4,6 +4,7 @@ import Box from "../../components/Box";
 import AccordionItem from "../../components/AccordionItem";
 
 function AwardsList({awards, ...rest }) {
+  console.log(awards)
   return (
     <Box {...rest}>
       {awards.map(({ date, title, content }) => (
