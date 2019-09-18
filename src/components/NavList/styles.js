@@ -9,7 +9,7 @@ export const List = styled(Box)`
 `;
 
 const active = css`
-  color: ${props => props.theme.colors.primary};
+  color: ${props => "green"};
 `;
 
 const normal = css`

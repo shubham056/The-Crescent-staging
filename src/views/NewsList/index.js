@@ -11,9 +11,9 @@ function NewsList({ news, ...rest }) {
         <NewsItem key={id} mb={3}>
           <Date>{date}</Date>
           <Title color="secondary" as="a" href={url}>
-            <Icon color="primary">
+            {/* <Icon color="primary">
               <FileDownload size="1rem" />
-            </Icon>
+            </Icon> */}
             {title}
           </Title>
         </NewsItem>

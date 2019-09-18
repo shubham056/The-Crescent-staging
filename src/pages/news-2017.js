@@ -1,5 +1,8 @@
 import React from "react";
 import { Container, Row, Col } from "styled-bootstrap-grid";
+import { graphql } from "gatsby";
+import moment from 'moment';
+import timezone from 'moment-timezone';
 
 // Components
 import Layout from "../components/Layout";
@@ -17,7 +20,32 @@ import AwardsList from "../views/AwardsList";
 // Temporary assets
 import hero from "./temp/hero_news.jpg";
 
-function News() {
+function News({data}) {
+//console.log(data.strapiNews.Awards.awardscategories);
+  const newsCategory = data.strapiNews.News.newscategories.map(res=>{
+    return{
+      id: res.id,
+      date: moment(res.date).tz('America/Chicago').format('MMM D'),
+      title: res.title,
+      url: res.url,
+}
+  });
+  const annoucementCategory = data.strapiNews.Announcements.announcaterogies.map(res=>{
+    return{
+      id: res.id,
+      date: moment(res.date).tz('America/Chicago').format('MMM D'),
+      title: res.title,
+      url: res.url,
+}
+  });
+  const awardCategory = data.strapiNews.Awards.awardscategories.map(res=>{
+    return{
+      date: moment(res.date).tz('America/Chicago').format('MMM D'),
+      title: res.title,
+      content: res.content,
+}
+  });
+ //console.log(awardCategory);
   return (
     <Layout>
       <SEO title="News" />
@@ -42,19 +70,7 @@ function News() {
                     </Heading>
                     <NewsList
                       mb={5}
-                      news={[
-                        {
-                          id: 1,
-                          date: "Jul 16",
-                          title: "The Cresent Secures Four New Leases",
-                          url: "https://www.google.com/",
-                        },
-                        {
-                          id: 2,
-                          date: "Jul 16",
-                          title: "New Retail at The Crescent",
-                        },
-                      ]}
+                      news={newsCategory}
                     />
                   </Col>
                   <Col xl={5}>
@@ -63,26 +79,16 @@ function News() {
                     </Heading>
                     <AnnouncementList
                       mb={5}
-                      announcements={[
-                        {
-                          id: 1,
-                          date: "Jul 16",
-                          title: "The Cresent Secures Four New Leases",
-                          url: "https://www.google.com/",
-                        },
-                        {
-                          id: 2,
-                          date: "Jul 16",
-                          title: "New Retail at The Crescent",
-                        },
-                      ]}
+                      announcements={annoucementCategory}
                     />
                   </Col>
                   <Col xl={7}>
                     <Heading lineHeight="1" fontSize={[4, "36px"]} mb={4}>
                       <span>Awards</span>
                     </Heading>
-                    <AwardsList />
+                    <AwardsList
+                    awards={awardCategory}
+                    />
                   </Col>
                 </Row>
               </Box>
@@ -95,3 +101,40 @@ function News() {
 }
 
 export default News;
+
+export const PageQuery = graphql`
+  {
+    strapiNews(year: {eq: "2017"}) {
+      News {
+        year
+        newscategories {
+          id
+          date
+          title
+          url
+          content
+        }
+      }
+      Announcements {
+        id
+        announcaterogies {
+          id
+          date
+          title
+          url
+          content
+        }
+      }
+      Awards {
+        id
+        awardscategories {
+          id
+          date
+          title
+          url
+          content
+        }
+      }
+    }
+  }
+`

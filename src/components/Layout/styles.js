@@ -16,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   a {
-    color: ${props => props.theme.colors.primary};
+    color: gray;
     text-decoration: none;
   }
 
@@ -131,5 +131,8 @@ export const GlobalStyle = createGlobalStyle`
     background-repeat: no-repeat;
     background-size: cover;
     height: 280px;
+  }
+  .active{
+    color: #307EAF;
   }
 `;

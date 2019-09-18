@@ -1,6 +1,7 @@
-import React from "react";
+import React, { Component } from "react";
 import { graphql } from "gatsby"
 import { Container } from "styled-bootstrap-grid";
+
 
 // Components
 import Layout from "../components/Layout";
@@ -36,23 +37,36 @@ const images = [
   image2
 ];
 
-function Gallery({data}) {
-  const newGallery = data.allStrapiGalleries.edges.map(res=>res.node.crescent_gallery.publicURL)
-  return (
-    <Layout>
-      <SEO title="Location" />
-      <Hero src={hero} />
-      <Container>
-        <Box py={[5, "100px"]}>
-          <Heading fontSize={[4, "36px"]}>
-            <span>Photo & Video</span> GAllery
-          </Heading>
-        </Box>
-      </Container>
-      <GalleryV  images={(typeof newGallery !== 'undefined' && newGallery.length > 0)?newGallery:images} p="5px" />
-    
-    </Layout>
-  );
+class Gallery extends Component {
+  constructor(props,data) {
+    super(props);
+   
+  }
+  
+  render(){
+    const { data } = this.props;
+    const newGallery = data.allStrapiGalleries.edges.map(res=>res.node.crescent_gallery.publicURL)
+  
+    return (
+      <Layout>
+        <SEO title="Location" />
+        <Hero src={hero} />
+        <Container>
+          <Box py={[5, "100px"]}>
+            <Heading fontSize={[4, "36px"]}>
+              <span>Photo & Video</span> GAllery
+            </Heading>
+          </Box>
+        </Container>
+        <GalleryV images={(typeof newGallery !== 'undefined' && newGallery.length > 0)?newGallery:images}
+         p="5px"
+         onClick={() => console.log("test")}
+         />
+     
+      </Layout>
+    );
+  }
+ 
 }
 
 export default Gallery;
