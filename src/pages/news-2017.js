@@ -21,7 +21,6 @@ import AwardsList from "../views/AwardsList";
 import hero from "./temp/hero_news.jpg";
 
 function News({data}) {
-//console.log(data.strapiNews.Awards.awardscategories);
   const newsCategory = data.strapiNews.News.newscategories.map(res=>{
     return{
       id: res.id,
@@ -36,6 +35,9 @@ function News({data}) {
       date: moment(res.date).tz('America/Chicago').format('MMM D'),
       title: res.title,
       url: res.url,
+      content:res.content,
+      time:res.time,
+      address:res.address,
 }
   });
   const awardCategory = data.strapiNews.Awards.awardscategories.map(res=>{
@@ -123,6 +125,8 @@ export const PageQuery = graphql`
           title
           url
           content
+          time
+          address
         }
       }
       Awards {

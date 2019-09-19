@@ -1,21 +1,114 @@
-import React from "react";
+import React,{Component} from "react";
+ import {Link} from 'gatsby'
+import Modal from "react-responsive-modal";
+import { Container, Row, Col } from "styled-bootstrap-grid";
+import Hero from "../../components/Hero";
 
+import hero from "../../pages/temp/kristine_lang.png";
 import Box from "../../components/Box";
 import NewsItem, { Date, Title } from "../../components/NewsItem";
 
-function AnnouncementList({ announcements, ...rest }) {
-  return (
-    <Box {...rest}>
-      {announcements.map(({ id, date, title, url }) => (
+class AnnouncementList extends Component{
+  constructor(){
+    super()
+  }
+  state = {
+    open: false,
+    modelheading:null,
+    content: null,
+    Modeladdress: null,
+    Modelimage:null,
+    Modeldate:null,
+    Modeltime:null,
+    Modeltitle:null
+  };
+
+  onOpenModal = (ev) => {
+    this.setState({ open: true });
+    this.setState({content: ev.currentTarget.dataset.content})
+    this.setState({Modeldate: ev.currentTarget.dataset.date})
+    this.setState({Modeltime: ev.currentTarget.dataset.time})
+    this.setState({Modeladdress: ev.currentTarget.dataset.address})
+    this.setState({Modeltitle: ev.currentTarget.dataset.title})
+
+  };
+
+  onCloseModal = () => {
+    this.setState({ open: false });
+  };
+  render() {
+    console.log(this.props.announcements)
+    console.log(this.state.Modeldate)
+    console.log(this.state.Modeltime)
+    console.log(this.state.Modeladdress)
+    const { open } = this.state;
+    return (
+      <Box >
+        <Modal open={open} onClose={this.onCloseModal} classNames="mod">
+        <Container>
+              <Row>
+              <Col col={6} md={6} >
+              <Hero src={hero} />
+              </Col>
+            
+            
+          <Col col={6} md={6}>
+              <h2>
+                {this.state.Modeltitle} 
+              </h2>
+              <div >
+                {this.state.content}
+              </div >
+              <h3>
+                {this.state.Modeladdress}
+              </h3>
+              <h3>
+                {this.state.Modeldate}
+              </h3>
+            </Col>
+            </Row>
+          </Container>
+        </Modal>
+        
+        {this.props.announcements.map(({ id, date, title, url,content,time,address }) => (
         <NewsItem key={id} mb={3}>
           <Date>{date}</Date>
-          <Title color="secondary" as="a" href={url}>
-            {title}
+          <Title color="secondary" as="a" 
+          data-content={content} 
+          data-date={date} 
+          data-time={time} 
+          data-address={address} 
+          data-title={title} 
+          onClick={this.onOpenModal}
+          >
+            {/* <Icon color="primary">
+              <FileDownload size="1rem" />
+            </Icon> */}
+           {title}
           </Title>
         </NewsItem>
       ))}
-    </Box>
-  );
+      </Box>
+    );
+  }
 }
+
+// function AnnouncementList({ announcements, ...rest }) {
+//   return (
+//     <Box {...rest}>
+//       {announcements.map(({ id, date, title, url }) => (
+//         <NewsItem key={id} mb={3}>
+//           <Date>{date}</Date>
+//           <Title color="secondary" as="a" href={url}>
+//             {/* <Icon color="primary">
+//               <FileDownload size="1rem" />
+//             </Icon> */}
+//             <Link to={`announcements/Announcaterogies_${id}`}>{title}</Link> 
+//           </Title>
+//         </NewsItem>
+//       ))}
+//     </Box>
+//   );
+// }
 
 export default AnnouncementList;

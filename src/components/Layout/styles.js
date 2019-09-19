@@ -16,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   a {
-    color: gray;
+    color: #3e4d55;
     text-decoration: none;
   }
 
@@ -134,5 +134,8 @@ export const GlobalStyle = createGlobalStyle`
   }
   .active{
     color: #307EAF;
+  }
+  .styles_modal__gNwvD{
+   max-width: initial;
   }
 `;

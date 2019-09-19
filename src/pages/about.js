@@ -210,6 +210,24 @@ function About() {
         </Box>
       </Container>
       <TeamList teams={teams} />
+      <Box
+        bg="primary"
+        my={2}
+        px={3}
+        py={[5, 6]}
+        display="flex"
+        justifyContent="center"
+      >
+        <Box
+          maxWidth={844}
+          fontSize={[4, "36px"]}
+          fontWeight={700}
+          textAlign="center"
+          color="white"
+        >
+          200 Crescent Court, Suite 250 Dallas Texas 75201 214.880.4500
+        </Box>
+      </Box>
       <Box overflow="hidden" mb={3}>
         <ContentImage>
           <Content>
@@ -274,24 +292,8 @@ function About() {
           </Content>
         </ContentImage>
       </Box>
-      <Box
-        bg="primary"
-        my={2}
-        px={3}
-        py={[5, 6]}
-        display="flex"
-        justifyContent="center"
-      >
-        <Box
-          maxWidth={844}
-          fontSize={[4, "36px"]}
-          fontWeight={700}
-          textAlign="center"
-          color="white"
-        >
-          200 Crescent Court, Suite 250 Dallas Texas 75201 214.880.4500
-        </Box>
-      </Box>
+      
+      <p></p>
     </Layout>
   );
 }

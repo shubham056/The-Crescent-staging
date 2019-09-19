@@ -35,6 +35,9 @@ function News({data}) {
       date: moment(res.date).tz('America/Chicago').format('MMM D'),
       title: res.title,
       url: res.url,
+      content:res.content,
+      time:res.time,
+      address:res.address,
 }
   });
   const awardCategory = data.strapiNews.Awards.awardscategories.map(res=>{
@@ -120,6 +123,8 @@ export const PageQuery = graphql`
           title
           url
           content
+          time
+          address
         }
       }
       Awards {
