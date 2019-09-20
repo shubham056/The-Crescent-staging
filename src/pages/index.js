@@ -9,6 +9,7 @@ import Heading from "../components/Heading";
 import Button from "../components/Button";
 import { Video, Source } from "../components/Video";
 import BGImage from "../components/BGImage";
+import instafeed from 'react-instafeed'
 
 // Temporary
 import bgPlace from "./temp/bg_place.jpg";
@@ -20,7 +21,20 @@ import social3 from "./temp/social_3.png";
 import social4 from "./temp/social_4.png";
 import hero from "./temp/home_hero.jpg";
 
-const Index = () => (
+const options = {
+  accessToken: '8987997106.924f677.8555ecbd52584f41b9b22ec1a16dafb9',
+  clientId: '924f677fa3854436947ab4372ffa688d',
+  get: 'user', // popular, user
+  locationId: null,
+  resolution: 'standard_resolution', // thumbnail, low_resolution, standard_resolution
+  sortBy: 'none', // none, least-commented, least-liked, least-recent, most-commented, most-liked, most-recent, random
+  tagName: null,
+  userId: 8987997106,
+}
+
+
+const Index = () => {
+  return(
   <Layout>
     <SEO title="Home" />
     <Hero src={hero} />
@@ -178,6 +192,7 @@ const Index = () => (
         <span>Get social</span> with us
       </Heading>
     </Container>
+   
     <Box display="flex" flexWrap="wrap" p="6px">
       <BGImage border="6px solid" borderColor="white" src={social1} />
       <BGImage border="6px solid" borderColor="white" src={social3} />
@@ -191,6 +206,7 @@ const Index = () => (
       <BGImage border="6px solid" borderColor="white" src={social2} />
     </Box>
   </Layout>
-);
+  );
+}
 
 export default Index;

@@ -72,7 +72,7 @@ module.exports = {
       options: {
         apiURL: `http://157.245.132.14:1337`,
         queryLimit: 1000000, // Default to 100
-        contentTypes: [`galleries`,`dinewithuses`,`retalandhospitalities`,`news`,`newscategories`,`announcaterogies`],
+        contentTypes: [`galleries`,`dinewithuses`,`retalandhospitalities`,`news`,`newscategories`,`announcaterogies`,`leasingspaces`],
         // Possibility to login with a strapi user, when content types are not publically available (optional).
         loginData: {
           identifier: "",

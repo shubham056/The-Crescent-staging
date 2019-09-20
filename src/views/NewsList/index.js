@@ -2,6 +2,7 @@ import React from "react";
 import { FileDownload } from "styled-icons/fa-solid/FileDownload";
 import { Link } from 'gatsby'
 
+
 import Box from "../../components/Box";
 import NewsItem, { Date, Title, Icon } from "../../components/NewsItem";
 

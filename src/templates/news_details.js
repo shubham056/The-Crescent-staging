@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Hero from "../components/Hero";
 import Box from "../components/Box";
+import renderHTML from 'react-render-html';
 // Temporary assets
 import hero from "../pages/temp/hero_news.jpg";
  
@@ -15,7 +16,7 @@ const NewsTemplate = ({ data }) => {
      {/* <pre>{JSON.stringify(data, null, 4)}</pre> */}
      <Box py={[5, "50px"]}>
      <Container>
-     {data.strapiNewscategories.content}
+     {renderHTML(data.strapiNewscategories.content)}
      </Container>
      </Box>
  </Layout>

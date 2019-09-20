@@ -1,5 +1,6 @@
 import React,{Component} from "react";
- import {Link} from 'gatsby'
+ import {Link} from 'gatsby';
+ import renderHTML from 'react-render-html';
 import Modal from "react-responsive-modal";
 import { Container, Row, Col } from "styled-bootstrap-grid";
 import Hero from "../../components/Hero";
@@ -7,6 +8,9 @@ import Hero from "../../components/Hero";
 import hero from "../../pages/temp/kristine_lang.png";
 import Box from "../../components/Box";
 import NewsItem, { Date, Title } from "../../components/NewsItem";
+import addreddIcon from '../../pages/temp/1.png'
+import timeIcon from '../../pages/temp/2.png'
+import calIcon from '../../pages/temp/3.png'
 
 class AnnouncementList extends Component{
   constructor(){
@@ -37,6 +41,7 @@ class AnnouncementList extends Component{
     this.setState({ open: false });
   };
   render() {
+    console.log(addreddIcon)
     console.log(this.props.announcements)
     console.log(this.state.Modeldate)
     console.log(this.state.Modeltime)
@@ -52,19 +57,14 @@ class AnnouncementList extends Component{
               </Col>
             
             
-          <Col col={6} md={6}>
-              <h2>
-                {this.state.Modeltitle} 
-              </h2>
-              <div >
-                {this.state.content}
-              </div >
-              <h3>
-                {this.state.Modeladdress}
-              </h3>
-              <h3>
-                {this.state.Modeldate}
-              </h3>
+          <Col col={6} md={6} className="text-area">
+            <div className="inner-txt">
+              <h2> {this.state.Modeltitle}</h2>
+              <div >{this.state.content}</div >
+              <p><img className="small_icons" src={addreddIcon}/> {this.state.Modeladdress}</p>
+              <p><img className="small_icons" src={calIcon}/> {this.state.Modeldate}</p>
+              <p><img className="small_icons" src={timeIcon}/> {this.state.Modeltime}</p>
+              </div>
             </Col>
             </Row>
           </Container>

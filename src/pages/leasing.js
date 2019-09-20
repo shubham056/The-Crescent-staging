@@ -1,5 +1,13 @@
 import React from "react";
 import { Container } from "styled-bootstrap-grid";
+import Tabs from 'react-responsive-tabs';
+// IMPORTANT you need to include the default styles
+import 'react-responsive-tabs/styles.css';
+import renderHTML from 'react-render-html';
+import AccordionItem from "../../src/components/AccordionItem";
+import { graphql } from "gatsby";
+
+
 
 // Components
 import Layout from "../components/Layout";
@@ -16,8 +24,34 @@ import Table, { THead, TBody, TH, TR, TD } from "../compound/Table";
 // Temp
 import hero from "./temp/hero_leasing.jpg";
 import image from "./temp/content_image.jpg";
+// const presidents = [
+//                   { name: 'BUILDING 100', 
+//                     biography: "<table><tr><th className=th-gray>FLOOR</th><th className=th-gray>SUITE</th><th className=th-gray>RSF</th><th className=th-gray>FLOOR PLAN</th></tr><tr><td>2nd</td><td>Suite 200</td><td>3,811</td><td>Download</td></tr><tr><td>2nd</td><td>Suite 200</td><td>3,811</td><td>Download</td></tr><tr><td>244nd</td><td>Suite 200</td><td>3,811</td><td>Download</td></tr><tr><td>5th</td><td>Suite 200</td><td>3,811</td><td>Download</td></tr></table>" 
+//                   },
+//                   { name: 'BUILDING 200',
+//                     biography: '<table><tr><th className=th-gray>FLOOR</th><th className=th-gray>SUITE</th><th className=th-gray>RSF</th><th className=th-gray>FLOOR PLAN</th></tr><tr><td>2nd</td><td>Suite 200</td><td>3,811</td><td>Download</td></tr><tr><td>2nd</td><td>Suite 200</td><td>3,811</td><td>Download</td></tr><tr><td>24444444444nd</td><td>Suite 200</td><td>3,811</td><td>Download</td></tr><tr><td>5th</td><td>Suite 200</td><td>3,811</td><td>Download</td></tr></table>' 
+//                   },
+//                   { name: 'BUILDING 300',
+//                     biography: '<table><tr><th>FLOOR</th><th>SUITE</th><th>RSF</th><th>FLOOR PLAN</th></tr><tr><td>2nd</td><td>Suite 200</td><td>3,811</td><td>Download</td></tr><tr><td>2nd</td><td>Suite 200</td><td>3,811</td><td>Download</td></tr><tr><td>2nd</td><td>Suite 200</td><td>3,811</td><td>Download</td></tr><tr><td>544th</td><td>Suite 200</td><td>3,811</td><td>Download</td></tr></table>' 
+//                   },
+//                   { name: 'BUILDING 500',
+//                     biography: '<table><tr><th>FLOOR</th><th>SUITE</th><th>RSF</th><th>FLOOR PLAN</th></tr><tr><td>2nd</td><td>Suite 200</td><td>3,811</td><td>Download</td></tr><tr><td>2nd</td><td>Suite 200</td><td>3,811</td><td>Download</td></tr><tr><td>2nd</td><td>Suite 200</td><td>3,811</td><td>Download</td></tr><tr><td>54444444th</td><td>Suite 200</td><td>3,811</td><td>Download</td></tr></table>' 
+//                   }
+//                    ];
 
-const Leasing = () => (
+const Leasing = ({data}) => {
+  function getTabs() {
+    return data.allStrapiLeasingspaces.edges.map((president, index) => ({
+      //title : president.node.building_name
+      title: president.node.building_name,
+      getContent: () => renderHTML(president.node.contents),
+      /* Optional parameters */
+      key: index,
+      tabClassName: 'tab',
+      panelClassName: 'panel',
+    }));
+  }
+  return(
   <Layout>
     <SEO title="Home" />
     <Hero src={hero} />
@@ -52,7 +86,26 @@ const Leasing = () => (
     </Box>
     <Container>
       <Box overflowY="auto" mt={[3, 4, 6]} mb={[5, 6]}>
-        <Table width={1}>
+
+      <Tabs items={getTabs()} 
+      showMore={false}
+      />
+      <div className="mobile_accordian">
+          {
+            data.allStrapiLeasingspaces.edges.map(es=>{
+              return(
+                
+                <AccordionItem
+                mb={3}
+                title={es.node.building_name}
+                content={es.node.contents}
+                
+              />
+              )
+            })
+          }
+      </div>
+        {/* <Table width={1}>
           <THead>
             <TR>
               <TH>Building <br />100</TH>
@@ -93,7 +146,7 @@ const Leasing = () => (
               <TD>Download</TD>
             </TR>
           </TBody>
-        </Table>
+        </Table> */}
       </Box>
     </Container>
     <Box
@@ -115,6 +168,20 @@ const Leasing = () => (
       </Box>
     </Box>
   </Layout>
-);
+  )
+      }
 
 export default Leasing;
+export const PageQuery = graphql`
+  {
+    allStrapiLeasingspaces {
+      edges {
+        node {
+          id
+          building_name
+          contents
+        }
+      }
+    }
+  }
+`
