@@ -126,7 +126,7 @@ function Header() {
           </A>
         </Item>
         <Item>
-          <A fontSize={[4, "36px"]} to="/news">
+          <A fontSize={[4, "36px"]} to="/news-2017">
             News
           </A>
         </Item>
