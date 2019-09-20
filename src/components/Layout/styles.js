@@ -221,23 +221,23 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0 30px;
   }
   .mobile_accordian{display:none;}
-.mobile_accordian .Box-jLJQJw.bsqsrn{display:none;}
-.mobile_accordian .Box-jLJQJw.eTtlmG{width:100%;}
-.mobile_accordian .Box-jLJQJw.eTtlmG table{width:100%;}
+.mobile_accordian .smblock{display:none;}
+.mobile_accordian .lgblock{width:100%;}
+.mobile_accordian .lgblock table{width:100%;}
 
-.mobile_accordian .Box-jLJQJw.eTtlmG table tr th{padding:15px 5px; text-align:left; border-bottom:1px solid grey}
-.mobile_accordian .Box-jLJQJw.eTtlmG table tr td{padding:15px 5px; text-align:left; border-bottom:1px solid grey}
-.mobile_accordian .Box-jLJQJw.eTtlmG .AccordionItem__StyledContent-iESnqx{padding-top:20px;}
+.mobile_accordian .lgblock table tr th{padding:15px 5px; text-align:left; border-bottom:1px solid grey}
+.mobile_accordian .lgblock table tr td{padding:15px 5px; text-align:left; border-bottom:1px solid grey}
+.mobile_accordian .lgblock .AccordionItem__StyledContent-iESnqx{padding-top:20px;}
 
 
-.mobile_accordian > .Box-jLJQJw.active{background:#307EAF !important; color:#fff;}
-.mobile_accordian > .Box-jLJQJw.active table tr th{border-color:#fff}
-.mobile_accordian > .Box-jLJQJw.active table tr td{border-color:#fff}
-.mobile_accordian > .Box-jLJQJw:nth-child(odd) {
+.mobile_accordian > .lgblock div.active{background:#307EAF !important; color:#fff;}
+.mobile_accordian > .lgblock div.active table tr th{border-color:#fff}
+.mobile_accordian > .lgblock div.active table tr td{border-color:#fff}
+.mobile_accordian > .lgblock div:nth-child(odd) {
   background: #F0F0F0;
 }
-.mobile_accordian > .Box-jLJQJw{padding:15px 8px; margin:0;}
-.mobile_accordian > .Box-jLJQJw:nth-child(even) {
+.mobile_accordian > .lgblock{padding:15px 8px; margin:0;}
+.mobile_accordian > .lgblock:nth-child(even) {
   background: #ffffff;
 }
 

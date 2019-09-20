@@ -34,10 +34,10 @@ function AccordionItem({ date, title, content, ...rest }) {
   const [active, set] = useState(false);
   return (
     <StyledWrap {...rest} onClick={() => set(!active)}>
-      <Box width="20%">
+      <Box width="20%" className='smblock'>
         <Date date={date} />
       </Box>
-      <Box width="80%">
+      <Box width="80%" className='lgblock'>
         <Title active={active} title={title} />
         <Content active={active} content={content} />
       </Box>
