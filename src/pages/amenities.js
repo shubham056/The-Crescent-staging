@@ -20,9 +20,6 @@ import sample4 from "./temp/social_4.png";
 import sample5 from "./temp/social_1.png";
 import { graphql } from "gatsby";
 
-
-
-
 // Temp data
 const sliderData = [
   {
@@ -39,58 +36,29 @@ const sliderData = [
     <a href="https://www.crescentcourt.com/dining/beau-nash" target="_blank">crescentcourt.com</a>
     A popular cocktail spot, Beau's offers drinks, snacks and desserts with a dash of Uptown energy. Located in the Great Hall with soaring limestone columns and polished marble floors, Beau's is a relaxing spot to people and relax. The lounge offers an extensive drink selection with an array of premium wines by the glass`,
   },
-  {
-    src: sample1,
-    title: `East Hampton Sandwich Shop`,
-    desc: `200 Crescent Court, Suite 100214.698.5108 Hours: Monday - Friday 7 a.m. to 8 p.m., Saturday – Sunday 8 a.m. to 3 p.m. <a href="https://www.ehsandwich.com/location/the-crescent" target="_blank">ehsandwich.com</a> A refined kitchen and caterer offering sandwiches, salads, beer, and wine, East Hampton Sandwich Co. is dedicated to handcrafted ingredients and quick, upscale service.`,
-  },
-  {
-    src: sample1,
-    title: `Moxie's Grill & Bar`,
-    desc: `100 Crescent Court, Suite 140469.687.0050 Hours: Monday-Wednesday 11 a.m. to 12 a.m., Thursday-Saturday 11 a.m. to 2 a.m., Sunday 11 a.m. – 12 a.m. moxies.com Moxie's Dallas offers both a casual and cultivated feeling, perfect for enjoying house-made dishes and hand crafted cocktails. Offering one of the best burger and beer experiences in Uptown Dallas, the feature locally sourced beef and craft draft, in addition to globally inspired dishes.`,
-  },
-  {
-    src: sample1,
-    title: `Nobu`,
-    desc: `400 Crescent Court 214.252.7000 Hours: Sunday-Thursday 6 p.m. to 10:00 p.m. Friday-Saturday 6 p.m. to 11:00 p.m.<a href="https://www.noburestaurants.com/dallas/home/" target="_blank">noburestaurants.com</a> Just off the lobby of Hotel Crescent Court sits Nobu, the world renowned Japanese restaurant recognized for pioneering a new style Japanese cuisine. Guests may linger in the cocktail lounge to watch chefs work their magic at the sushi bar, or enjoy their meal in the Rockwell Group designed dining room. Nobu’s Wine Room, Skylight Room and Outdoor Courtyard are also available for private functions.`,
-  },
-  {
-    src: sample2,
-    title: `Shake Shack`,
-    desc: `2500 N. Pearl Street 214.983.1023 Hours: Sunday-Thursday 11 a.m. to 10 p.m., Friday-Saturday 11 a.m. to 11 p.m. shakeshack.com
-    Shake Shack is the perfect spot to kick back with a delicious ShackBurger and local beer in a park-like setting. In addition to the Shack classics, the menu features the Dallas-exclusive Link Burger and a selection of frozen treats created specifically for the Shake Shack at The Crescent.`,
-  },
-  {
-    src: sample4,
-    title: `Sixty Vines`,
-    desc: `500 Crescent Court 214.814.8463 Hours: Sunday 10 a.m. to 12 p.m., Monday- Thursday 11 a.m. to 11 p.m., Friday 11 a.m. to 12 a.m., Saturday 11 a.m. to 12 a.m. <a href="https://sixtyvines.com/location/uptown-dallas-tx" target="_blank">sixtyvines.com</a> Focus on food first, with cuisine inspired by the wine country and an open kitchen that delights every sense. Then, it’s time to experience a better way to enjoy wine: on tap and perfectly selected to complement each dish. `,
-  },
-  {
-    src: sample3,
-    title: `Starbucks`,
-    desc: `400 Crescent Court 214.871.3200 Hours: Monday - Friday 6 a.m. to 5 p.m., Saturday - Sunday 7 a.m. to 1 p.m. <a href="https://www.crescentcourt.com/dining/starbucks-2" target="_blank">crescentcourt.com</a> Starbucks waits to meet the morning's caffeine quota. Guests can choose their favorite brew prepared by the highly trained and efficient baristas.`,
-  },
-  {
-    src: sample5,
-    title: `The Capital Grille`,
-    desc: `500 Crescent Court, Suite 135214.303.0500 Hours: Tuesday - Thursday 11 a.m. to 10 p.m., Friday 11 a.m. to 11 p.m., Saturday 5p.m. to 11 p.m., Sunday 5 p.m. to 9 p.m., Monday 4 p.m. to 10 p.m. <a href="https://www.thecapitalgrille.com/locations/tx/dallas/dallas-uptown/8012" target="_blank">thecapitalgrille.com</a>Visit The Capital Grille and enjoy classic steakhouse fare such as the dry aged Porterhouse, creative seafood dishes like the Citrus Glazed Salmon, and an award-winning wine list that is sure to please. Private dining can accommodate up to 46 guests. `,
-  },
 ];
-
 
 const Amenities = ({data}) => {
   const DineWithUs = data.allStrapiDinewithuses.edges.map(res=>{
     return{
           src:res.node.image.publicURL,
           title:res.node.heading,
-          desc:res.node.description
+          desc:res.node.description,
+          address:res.node.address,
+          time:res.node.time,
+          url:res.node.website_url,
+          phone_no:res.node.phone_no,
     };
   })
   const RetailAndHospitality = data.allStrapiDinewithuses.edges.map(res=>{
     return{
           src:res.node.image.publicURL,
           title:res.node.heading,
-          desc:res.node.description
+          desc:res.node.description,
+          address:res.node.address,
+          time:res.node.time,
+          url:res.node.website_url,
+          phone_no:res.node.phone_no,
     };
   })
  return(
@@ -163,6 +131,10 @@ export const PageQuery = graphql`
         id
         heading
         description
+        address
+        phone_no
+        time
+        website_url
         image {
           publicURL
         }
@@ -173,6 +145,10 @@ export const PageQuery = graphql`
     id
     heading
     description
+    address
+    phone_no
+    time
+    website_url   
     image {
       publicURL
     }

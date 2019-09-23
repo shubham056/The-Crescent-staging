@@ -105,13 +105,19 @@ function CardSlider({ onClick, data, ...rest }) {
   return (
     <Box {...rest} mr="-8px" ml="-8px">
       <Slider {...settings}>
-        {data.map(({ src, title, desc }) => (
+        {data.map(({ src, title, desc, address, time, url, phone_no }) => (
           <MediaCard
             px={2}
             key={title}
             src={src}
             title={(title.length<17)?title.substring(0,17):title.substring(0,17)+"..."}
             desc={(desc.length<86) ? desc.substring(0,86) : desc.substring(0,86)+"..."}
+            address={address}
+            time={time}
+            url={url}
+            phone_no={phone_no}
+            fulldesc={desc}
+            fulltitle={title}
             onClick={onClick}
           />
         ))}

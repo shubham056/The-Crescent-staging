@@ -14,7 +14,7 @@ export const GlobalStyle = createGlobalStyle`
     line-height: 1.5;
     margin: 0;
   }
-
+  :focus{outline:none;}
   a {
     color: #3e4d55;
     text-decoration: none;
@@ -202,7 +202,7 @@ export const GlobalStyle = createGlobalStyle`
     width: 100%;
     transform: translateY(-50%);
   }
-  
+  .styles_modal__gNwvD .sc-htpNat.jTcoEK.text-area .inner-txt .huRhGc{margin-left:0; margin-right:0; }
   .styles_modal__gNwvD .sc-htpNat.jTcoEK.text-area .inner-txt p {
     padding-bottom: 10px
   }
@@ -240,12 +240,20 @@ export const GlobalStyle = createGlobalStyle`
 .mobile_accordian > .lgblock:nth-child(even) {
   background: #ffffff;
 }
-
-
+.spacing_none{
+  margin:0;
+  padding:0;
+}
+.content_new{
+  padding-bottom:20px;
+}
 
 
 @media only screen and (max-width:767px){
-
+.newlink{white-space: normal;
+  word-break: break-all;}
+.img_new_box{height:340px;}
+.styles_modal__gNwvD{width:100%;}
 .RRT__container{display:none;}
 .mobile_accordian{display:block}
 

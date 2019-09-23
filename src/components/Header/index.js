@@ -1,6 +1,10 @@
-import React, { useState } from "react";
+import React,{Component} from "react";
 import { Link } from "gatsby";
-import { Container } from "styled-bootstrap-grid";
+import { Container, Row, Col } from "styled-bootstrap-grid";
+import Modal from "react-responsive-modal";
+import Hero from "../../components/Hero";
+import hero from "../../pages/temp/component.png";
+import Button from "../../components/Button";
 
 import Box from "../Box";
 import { Social, SocialItem } from "../Social";
@@ -18,13 +22,32 @@ import {
 
 import LogoPath from "./LogoPath";
 
-function Header() {
-  const [open, set] = useState(false);
+class Header extends Component{
+  //const [open, set] = useState(false);
+  state = {
+    open: false,
+    openModel: false,
+    Modeltitle:null,
+    content: null,
+    Modelimage:null
+  };
+  onOpenModal = (ev) => {
+    this.setState({ openModel: true });
+    this.setState({content: ev.currentTarget.dataset.content})
+    this.setState({Modeltitle: ev.currentTarget.dataset.title})
+
+  };
+
+  onCloseModal = () => {
+    this.setState({ openModel: false });
+  };
+  render(){
+    const { openModel } = this.state;
   return (
     <Box
-      bg={open ? `primary` : `white`}
+      bg={this.state.open ? `primary` : `white`}
       width={1}
-      height={open ? `100vh` : `100px`}
+      height={this.state.open ? `100vh` : `100px`}
       position="fixed"
       top="0"
       left="0"
@@ -41,21 +64,62 @@ function Header() {
           justifyContent="space-between"
           pt="30px"
         >
+
+       <Modal open={openModel} onClose={this.onCloseModal} className="mod">
+        <Container>
+              <Row>
+                <Col col={6} md={6} >
+                <Hero src={hero} className="map_img" />
+                </Col>
+                  <Col col={6} md={6} className="text-area">
+                    <div className="inner-txt">
+                      <h2> {this.state.Modeltitle}</h2>
+                      <div >{this.state.content}</div >
+                      <div>
+                      <Button
+                          px={5}
+                          width={[1, "auto"]}
+                          my={2}
+                          mx={[0, 3]}
+                          as="a"
+                          href="#"
+                        >
+                          Validate Office Parking
+                      </Button>
+                      </div>
+                      <div>
+                      <Button
+                          px={5}
+                          width={[1, "auto"]}
+                          my={2}
+                          mx={[0, 3]}
+                          as="a"
+                          href="#"
+                        >
+                          Validate Vallet Parking
+                      </Button>
+                      </div>
+                    </div>
+                    </Col>
+            </Row>
+          </Container>
+        </Modal>
+
           <Link to="/">
             <Box as="svg" width="240px" viewBox="0 0 471 55">
-              <LogoPath open={open} />
+              <LogoPath open={this.state.open} />
             </Box>
           </Link>
           <Box display={["none", null, "block"]}>
             <Social>
               <SocialItem href="https://www.facebook.com/TheCrescentDallas/" target="_blank">
-                <StyledFacebookF color={open ? `white` : `primary`} />
+                <StyledFacebookF color={this.state.open ? `white` : `primary`} />
               </SocialItem>
               <SocialItem href="https://www.instagram.com/thecrescentdallas" target="_blank">
-                <StyledInstagram color={open ? `white` : `primary`} />
+                <StyledInstagram color={this.state.open ? `white` : `primary`} />
               </SocialItem>
               <SocialItem href="https://vimeo.com/channels/thecrescent" target="_blank">
-                <StyledVimeoV color={open ? `white` : `primary`} />
+                <StyledVimeoV color={this.state.open ? `white` : `primary`} />
               </SocialItem>
             </Social>
           </Box>
@@ -64,10 +128,10 @@ function Header() {
               <Box mr={[null, 0, 4]}>
                 <IconText>
                   <Icon>
-                    <StyledUserTie color={open ? `white` : `primary`} />
+                    <StyledUserTie color={this.state.open ? `white` : `primary`} />
                   </Icon>
                   <Text>
-                    <Box color={open ? `white` : `grays.0`}>
+                    <Box color={this.state.open ? `white` : `grays.0`}>
                     <a style={{color:"#A7A9AC"}} href="https://www.ng1.angusanywhere.com/Tenant/default.aspx?CompanyName=69941&WebsiteName=Main" target="_blank">
                       Customer
                       <br />
@@ -79,11 +143,17 @@ function Header() {
               <Box mr={[null, 0, 5]}>
                 <IconText>
                   <Icon>
-                    <StyledParking color={open ? `white` : `primary`} />
+                    <StyledParking color={this.state.open ? `white` : `primary`} />
                   </Icon>
                   <Text>
-                    <Box color={open ? `white` : `grays.0`}>
-                    <a style={{color:"#A7A9AC"}} href="parking-validation" target="_blank">
+                    <Box color={this.state.open ? `white` : `grays.0`}>
+                    <a style={{color:"#A7A9AC"}} href="#" 
+                    //target="_blank"
+                    data-title={"PARKING AT THE CRESCENT"} 
+                    data-content={"The Crescent® is a unique, luxury, mixed-use development consisting of 1.1 million gross square feet of office space and 165,000 gross square feet in the atrium.  In one prestigious location, the finest office spaces, hotel accommodations, restaurants, spa, retail shops and services are available."} 
+                    data-parkingButtons={true}
+                    onClick={this.onOpenModal}
+                    >
                       Parking
                       <br />
                       validation
@@ -93,13 +163,13 @@ function Header() {
                 </IconText>
               </Box>
             </Box>
-            <Hamburger open={open} onClick={() => set(!open)}>
+            <Hamburger open={this.state.open} onClick={() => this.setState({open:!this.state.open})}>
               <div />
             </Hamburger>
           </Box>
         </Box>
       </Container>
-      <Menu open={open}>
+      <Menu open={this.state.open}>
         <Item>
           <A fontSize={[4, "36px"]} to="/about">
             About
@@ -147,6 +217,7 @@ function Header() {
       </Box>
     </Box>
   );
+  }
 }
 
 export default Header;

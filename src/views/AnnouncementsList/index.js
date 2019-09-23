@@ -9,7 +9,7 @@ import hero from "../../pages/temp/kristine_lang.png";
 import Box from "../../components/Box";
 import NewsItem, { Date, Title } from "../../components/NewsItem";
 import addreddIcon from '../../pages/temp/1.png'
-import timeIcon from '../../pages/temp/2.png'
+import timeIcon from '../../pages/temp/2.jpg'
 import calIcon from '../../pages/temp/3.png'
 
 class AnnouncementList extends Component{
@@ -41,15 +41,15 @@ class AnnouncementList extends Component{
     this.setState({ open: false });
   };
   render() {
-    console.log(addreddIcon)
-    console.log(this.props.announcements)
-    console.log(this.state.Modeldate)
-    console.log(this.state.Modeltime)
-    console.log(this.state.Modeladdress)
+    // console.log(addreddIcon)
+    // console.log(this.props.announcements)
+    // console.log(this.state.Modeldate)
+    // console.log(this.state.Modeltime)
+    // console.log(this.state.Modeladdress)
     const { open } = this.state;
     return (
       <Box >
-        <Modal open={open} onClose={this.onCloseModal} classNames="mod">
+        <Modal open={open} onClose={this.onCloseModal} className="mod">
         <Container>
               <Row>
               <Col col={6} md={6} >
@@ -60,10 +60,10 @@ class AnnouncementList extends Component{
           <Col col={6} md={6} className="text-area">
             <div className="inner-txt">
               <h2> {this.state.Modeltitle}</h2>
-              <div >{this.state.content}</div >
-              <p><img className="small_icons" src={addreddIcon}/> {this.state.Modeladdress}</p>
-              <p><img className="small_icons" src={calIcon}/> {this.state.Modeldate}</p>
-              <p><img className="small_icons" src={timeIcon}/> {this.state.Modeltime}</p>
+              <div className="content_new">{this.state.content}</div >
+              <p className="spacing_none"><img className="small_icons" src={addreddIcon}/> {this.state.Modeladdress}</p>
+              <p className="spacing_none"><img className="small_icons" src={calIcon}/> {this.state.Modeldate}</p>
+              <p className="spacing_none"><img className="small_icons" src={timeIcon}/> {this.state.Modeltime}</p>
               </div>
             </Col>
             </Row>
