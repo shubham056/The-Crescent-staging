@@ -87,7 +87,8 @@ const Leasing = ({data}) => {
     <Container>
       <Box overflowY="auto" mt={[3, 4, 6]} mb={[5, 6]}>
 
-      <Tabs items={getTabs()} 
+      <Tabs 
+      items={getTabs()} 
       showMore={false}
       />
       <div className="mobile_accordian">

@@ -114,7 +114,7 @@ function About() {
             my={2}
             mx={[0, 2, 3]}
             as="a"
-            href="/management"
+            href="#management"
           >
             Management
           </Button>
@@ -124,7 +124,7 @@ function About() {
             my={2}
             mx={[0, 2, 3]}
             as="a"
-            href="/sustainability"
+            href="#sustainability"
           >
             Sustainability
           </Button>
@@ -134,7 +134,7 @@ function About() {
             my={2}
             mx={[0, 2, 3]}
             as="a"
-            href="/community"
+            href="#community"
           >
             Community
           </Button>
@@ -202,7 +202,7 @@ function About() {
         width={1}
         minHeight={[400, 800]}
       /> */}
-      <Container>
+      <Container id="management">
         <Box py={5}>
           <Heading as="h2" mb={0} fontSize={[4, "36px"]}>
             Our <span>management</span> team
@@ -228,7 +228,7 @@ function About() {
           200 Crescent Court, Suite 250 Dallas Texas 75201 214.880.4500
         </Box>
       </Box>
-      <Box overflow="hidden" mb={3}>
+      <Box overflow="hidden" mb={3} id="sustainability">
         <ContentImage>
           <Content>
             <Heading as="h2" fontSize={[4, "36px"]}>
@@ -259,7 +259,7 @@ function About() {
           <Image style={{backgroundPosition:"right center"}} src={thinkSustainable} />
         </ContentImage>
       </Box>
-      <Box overflow="hidden">
+      <Box overflow="hidden" id="community">
         <ContentImage>
           <Image src={thankYou} />
           <Content>

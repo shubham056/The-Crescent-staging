@@ -74,7 +74,7 @@ class Header extends Component{
                   <Col col={6} md={6} className="text-area">
                     <div className="inner-txt">
                       <h2> {this.state.Modeltitle}</h2>
-                      <div >{this.state.content}</div >
+                      <div className="content_new">{this.state.content}</div >
                       <div>
                       <Button
                           px={5}
@@ -83,8 +83,9 @@ class Header extends Component{
                           mx={[0, 3]}
                           as="a"
                           href="#"
+                          className="parking_button"
                         >
-                          Validate Office Parking
+                          Office Parking
                       </Button>
                       </div>
                       <div>
@@ -95,8 +96,9 @@ class Header extends Component{
                           mx={[0, 3]}
                           as="a"
                           href="#"
+                          className="parking_button"
                         >
-                          Validate Vallet Parking
+                        Valley Parking
                       </Button>
                       </div>
                     </div>

@@ -1,12 +1,15 @@
 import React from "react";
 
 import { Container } from "styled-bootstrap-grid";
+import Map from "../components/Map/Home";
 
 // Components
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
 import Hero from "../components/Hero";
 import Box from "../components/Box";
+
+
 
 // Views
 import MapForm from "../views/MapForm";
@@ -38,7 +41,7 @@ function Location() {
         </Box>
       </Container>
       <MapForm />
-     
+      <Map/>
       <Box
         bg="primary"
         my={2}
@@ -55,6 +58,7 @@ function Location() {
           color="white"
         >
           200 Crescent Court, Suite 250 Dallas Texas 75201 214.880.4500
+         
         </Box>
       </Box>
     </Layout>

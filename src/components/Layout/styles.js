@@ -170,17 +170,17 @@ export const GlobalStyle = createGlobalStyle`
     padding-right: 30px;
     padding-top: 16px;
     padding-bottom: 16px;
-    color: #3F4D55;
+    color: #ffffff;
     text-align: left;
     width: 24.9%;
   }
   
   .RRT__panel.panel table tr:nth-child(odd) {
-    background: #F0F0F0;
+    background: #307EAF;
   }
   
   .RRT__panel.panel table tr:nth-child(even) {
-    background: #ffffff;
+    background: #307EAF;
   }
   
   .RRT__panel.panel table {
@@ -202,7 +202,16 @@ export const GlobalStyle = createGlobalStyle`
     width: 100%;
     transform: translateY(-50%);
   }
-  .styles_modal__gNwvD .sc-htpNat.jTcoEK.text-area .inner-txt .huRhGc{margin-left:0; margin-right:0; }
+  .styles_modal__gNwvD .sc-htpNat.jTcoEK.text-area .inner-txt .parking_button
+  {
+    margin-left:0; 
+    margin-right:0;
+    max-width:260px;
+    width:100%;
+    text-align:center;
+    font-size:16px;
+    line-height:24px;
+   }
   .styles_modal__gNwvD .sc-htpNat.jTcoEK.text-area .inner-txt p {
     padding-bottom: 10px
   }
@@ -225,9 +234,9 @@ export const GlobalStyle = createGlobalStyle`
 .mobile_accordian .lgblock{width:100%;}
 .mobile_accordian .lgblock table{width:100%;}
 
-.mobile_accordian .lgblock table tr th{padding:15px 5px; text-align:left; border-bottom:1px solid grey}
-.mobile_accordian .lgblock table tr td{padding:15px 5px; text-align:left; border-bottom:1px solid grey}
-.mobile_accordian .lgblock .AccordionItem__StyledContent-iESnqx{padding-top:20px;}
+.mobile_accordian .lgblock table tr th{padding:15px 5px; text-align:left; border-bottom:1px solid #fff; color:#fff;}
+.mobile_accordian .lgblock table tr td{padding:15px 5px; text-align:left; border-bottom:1px solid #fff; color:#fff;}
+.mobile_accordian .lgblock .AccordionItem__StyledContent-iESnqx{padding-top:20px;background:#307EAF !important;}
 
 
 .mobile_accordian > .lgblock div.active{background:#307EAF !important; color:#fff;}
@@ -247,7 +256,9 @@ export const GlobalStyle = createGlobalStyle`
 .content_new{
   padding-bottom:20px;
 }
-
+#panel-0,#panel-1,#panel-2,#panel-3{
+  background:#ffffff !important; color:#fff;
+}
 
 @media only screen and (max-width:767px){
 .newlink{white-space: normal;
@@ -279,4 +290,5 @@ export const GlobalStyle = createGlobalStyle`
   max-width: 100%;
 }
 }
+
 `;
