@@ -72,8 +72,17 @@ class AnnouncementList extends Component{
         
         {this.props.announcements.map(({ id, date, title, url,content,time,address }) => (
         <NewsItem key={id} mb={3}>
-          <Date>{date}</Date>
+          <Date
+          style={{cursor:"pointer"}}
+          data-content={content} 
+          data-date={date} 
+          data-time={time} 
+          data-address={address} 
+          data-title={title} 
+          onClick={this.onOpenModal}
+          >{date}</Date>
           <Title color="secondary" as="a" 
+          style={{cursor:"pointer"}}
           data-content={content} 
           data-date={date} 
           data-time={time} 
