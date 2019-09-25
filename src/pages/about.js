@@ -20,7 +20,7 @@ import TeamList from "../views/TeamList";
 import hero from "./temp/about_hero.jpg";
 import ContentImageImage from "./temp/image_content_placeholder.jpg";
 import thinkSustainable from "./temp/think_sustainable.jpg";
-import thankYou from "./temp/thank_you.png";
+import thankYou from "./temp/thank_you.jpg";
 import team from "./temp/the_team.jpg";
 import kristine from "./temp/kristine_lang.png";
 import amanda from "./temp/amanda_tucker.png";

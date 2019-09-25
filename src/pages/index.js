@@ -179,15 +179,17 @@ componentDidMount() {
                         <Box color="white">
                         The Crescent’s concierge service is pleased to assist you with information regarding hotels, restaurants, and entertainment. They can assist you with most ticket orders and requests via phone or email. For all orders that need to be delivered to the building, please order no later than 2 p.m. on Thursdays for delivery each Friday no later than noon. Tickets must be picked up in the management office (200 Crescent Court, Suite 250) no later than 4 p.m. on Friday. The concierge accepts all major credit cards, debit cards, and company checks. For more information call (972) 770-4045.
                         </Box>
+                        <a href="http://texasconciergeconnection.com/" target="_blank">
                         <Button
                           color="white"
                           width={[1, "auto"]}
                           mt={4}
                           as="a"
-                          href="/crescent-concierge"
+                          //href="/crescent-concierge"
                         >
-                          Crescent Concierge
+                           Crescent Concierge
                         </Button>
+                        </a>
                       </Col>
                     </Row>
                   </Col>
@@ -199,27 +201,25 @@ componentDidMount() {
         <Video my={10} poster={videoPlace}>
           <Source src={videoSample} type="video/mp4" />
         </Video>
-        <Container>
+        <Container className="gal_container_heading">
           <Heading as="h2" mb={0} py={5} fontSize={[5, "36px"]}>
             <span>Get social</span> with us
           </Heading>
         </Container>
       
-        <Box display="flex" flexWrap="wrap" p="6px">
+        <Box display="flex" flexWrap="wrap" p="6px" className="gal_container">
           {
             (this.state.images.length>0 ? 
               this.state.images.map(res=>{
                 console.log(res)
                 return(
-                //<a key={res.id} href={res.link} target="_blank">
-                   <BGImage key={res.id} 
+                <a key={res.id} href={res.link} target="_blank" className="gal_card">
+                   <BGImage className="gal_card_img" key={res.id} 
                     border="6px solid" 
                     borderColor="white" 
                     src={res.images.standard_resolution.url} 
-                    //onClick={(e) => this.handleClick(e)}
-                    
                     />
-                //</a>
+                </a>
                 )
                 
               })

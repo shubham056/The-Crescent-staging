@@ -260,7 +260,38 @@ export const GlobalStyle = createGlobalStyle`
   background:#ffffff !important; color:#fff;
 }
 
+.gal_container .gal_card{width:20%;} 
+.gal_container .gal_card .gal_card_img{width:100%;} 
+
+.map_search_field {
+  width: 94%;
+  height: 65px;
+  padding-left: 16px;
+  margin-top: 2px;
+  position: absolute;
+  z-index: 1;
+  left: 586px;
+  top:105px;
+  border: 3px solid #F0F0F0;
+  font-size: 1.25rem;
+  padding: 10px 40px;
+  background-repeat: no-repeat;
+  background-position: 12px 19px!important;
+  background-size: 19px!important;
+}
+
+.int_search_box{visibility: hidden;}
+
+
 @media only screen and (max-width:767px){
+  .map_search_field {
+    width: 91%;
+    left: 17px;
+    top: 569px;
+   
+  }
+  .gal_container_heading h2{margin: 25px 0 0 0; padding: 0; font-size: 29px;}
+  .gal_container .gal_card{width:100%;} 
 .newlink{white-space: normal;
   word-break: break-all;}
 .img_new_box{height:340px;}

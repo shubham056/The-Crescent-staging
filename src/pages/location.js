@@ -41,7 +41,6 @@ function Location() {
         </Box>
       </Container>
       <MapForm />
-      <Map/>
       <Box
         bg="primary"
         my={2}

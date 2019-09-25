@@ -5,11 +5,11 @@ class Home extends Component {
 
 	render() {
 		return(
-			<div style={{ margin: '100px' }}>
+			<div>
 				<Map
 					google={this.props.google}
 					center={{lat: 32.7936538, lng: -96.8061019}}
-					height='300px'
+					height='480px'
 					zoom={15}
 				/>
 			</div>

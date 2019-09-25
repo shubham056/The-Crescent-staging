@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { withGoogleMap, GoogleMap, withScriptjs, InfoWindow, Marker } from "react-google-maps";
 import Geocode from "react-geocode";
 import Autocomplete from 'react-google-autocomplete';
-import MarkerIcon from '../../pages/temp/map_marker.jpg'
+import SearchIcon from '../../pages/temp/search_tool_icon.png'
 Geocode.setApiKey( "AIzaSyDcOUZbp3_ZctDiriJaRdh95EoJH4YHwLc" );
 Geocode.enableDebug();
 
@@ -237,13 +237,8 @@ class Map extends Component{
 						<Marker />
 						{/* For Auto complete Search Box */}
 						<Autocomplete
-							style={{
-								width: '100%',
-								height: '40px',
-								paddingLeft: '16px',
-								marginTop: '2px',
-								marginBottom: '500px'
-							}}
+						className="map_search_field"
+						    style ={ { backgroundImage: "url("+SearchIcon+")" } }
 							onPlaceSelected={ this.onPlaceSelected }
 							types={['(regions)']}
 						/>

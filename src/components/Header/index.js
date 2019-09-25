@@ -98,7 +98,7 @@ class Header extends Component{
                           href="#"
                           className="parking_button"
                         >
-                        Valley Parking
+                        Valet Parking
                       </Button>
                       </div>
                     </div>
