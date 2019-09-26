@@ -9,6 +9,8 @@ import Hero from "../components/Hero";
 import Button from "../components/Button";
 import Box from "../components/Box";
 import Heading from "../components/Heading";
+import AnchorLink from 'react-anchor-link-smooth-scroll'
+
 
 // Compound
 import ContentImage, { Content, Image } from "../compound/ContentImage";
@@ -31,6 +33,7 @@ import steve from "./temp/steve_benbrook.png";
 import robert from "./temp/robert_reed.png";
 
 // Temporary data
+import DownloadBrochure from '../pages/temp/DownloadBrochure.pdf'
 const teams = [
   {
     name: `<span>Julie</span> Young`,
@@ -116,7 +119,7 @@ function About() {
             as="a"
             href="#management"
           >
-            Management
+            <AnchorLink href='#management' style={{color:"#307EAF"}}>Management</AnchorLink>
           </Button>
           <Button
             px={5}
@@ -126,7 +129,7 @@ function About() {
             as="a"
             href="#sustainability"
           >
-            Sustainability
+          <AnchorLink href='#sustainability' style={{color:"#307EAF"}}>Sustainability</AnchorLink>
           </Button>
           <Button
             px={5}
@@ -136,7 +139,7 @@ function About() {
             as="a"
             href="#community"
           >
-            Community
+         <AnchorLink href='#community' style={{color:"#307EAF"}}>Community</AnchorLink>
           </Button>
         </Box>
       </Container>
@@ -162,7 +165,10 @@ function About() {
               power supply and the first office complex in Dallas to install
               innovative destination-dispatch elevators.
             </Box>
-            <Button mt={4} as="a" href="/download-brochure">
+            <Button mt={4} as="a" 
+            href={DownloadBrochure}
+            target="_blank"
+            >
               Download Brochure
             </Button>
           </Content>
@@ -202,7 +208,8 @@ function About() {
         width={1}
         minHeight={[400, 800]}
       /> */}
-      <Container id="management">
+      <div id="management">
+      <Container >
         <Box py={5}>
           <Heading as="h2" mb={0} fontSize={[4, "36px"]}>
             Our <span>management</span> team
@@ -210,6 +217,8 @@ function About() {
         </Box>
       </Container>
       <TeamList teams={teams} />
+      </div>
+      
       <Box
         bg="primary"
         my={2}
@@ -228,9 +237,10 @@ function About() {
           200 Crescent Court, Suite 250 Dallas Texas 75201 214.880.4500
         </Box>
       </Box>
-      <Box overflow="hidden" mb={3} id="sustainability">
+      <div id="sustainability">
+      <Box overflow="hidden" mb={3} >
         <ContentImage>
-          <Content>
+          <Content className="about-content">
             <Heading as="h2" fontSize={[4, "36px"]}>
               Be responsible, <span>think sustainable</span>
             </Heading>
@@ -262,7 +272,7 @@ function About() {
       <Box overflow="hidden" id="community">
         <ContentImage>
           <Image src={thankYou} />
-          <Content>
+          <Content className="about-content">
             <Heading as="h2" fontSize={[4, "36px"]}>
               Invested in <span>Our Community</span>
             </Heading>
@@ -292,6 +302,7 @@ function About() {
           </Content>
         </ContentImage>
       </Box>
+      </div>
       
       <p></p>
     </Layout>

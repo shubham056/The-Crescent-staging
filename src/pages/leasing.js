@@ -24,20 +24,8 @@ import Table, { THead, TBody, TH, TR, TD } from "../compound/Table";
 // Temp
 import hero from "./temp/hero_leasing.jpg";
 import image from "./temp/content_image.jpg";
-// const presidents = [
-//                   { name: 'BUILDING 100', 
-//                     biography: "<table><tr><th className=th-gray>FLOOR</th><th className=th-gray>SUITE</th><th className=th-gray>RSF</th><th className=th-gray>FLOOR PLAN</th></tr><tr><td>2nd</td><td>Suite 200</td><td>3,811</td><td>Download</td></tr><tr><td>2nd</td><td>Suite 200</td><td>3,811</td><td>Download</td></tr><tr><td>244nd</td><td>Suite 200</td><td>3,811</td><td>Download</td></tr><tr><td>5th</td><td>Suite 200</td><td>3,811</td><td>Download</td></tr></table>" 
-//                   },
-//                   { name: 'BUILDING 200',
-//                     biography: '<table><tr><th className=th-gray>FLOOR</th><th className=th-gray>SUITE</th><th className=th-gray>RSF</th><th className=th-gray>FLOOR PLAN</th></tr><tr><td>2nd</td><td>Suite 200</td><td>3,811</td><td>Download</td></tr><tr><td>2nd</td><td>Suite 200</td><td>3,811</td><td>Download</td></tr><tr><td>24444444444nd</td><td>Suite 200</td><td>3,811</td><td>Download</td></tr><tr><td>5th</td><td>Suite 200</td><td>3,811</td><td>Download</td></tr></table>' 
-//                   },
-//                   { name: 'BUILDING 300',
-//                     biography: '<table><tr><th>FLOOR</th><th>SUITE</th><th>RSF</th><th>FLOOR PLAN</th></tr><tr><td>2nd</td><td>Suite 200</td><td>3,811</td><td>Download</td></tr><tr><td>2nd</td><td>Suite 200</td><td>3,811</td><td>Download</td></tr><tr><td>2nd</td><td>Suite 200</td><td>3,811</td><td>Download</td></tr><tr><td>544th</td><td>Suite 200</td><td>3,811</td><td>Download</td></tr></table>' 
-//                   },
-//                   { name: 'BUILDING 500',
-//                     biography: '<table><tr><th>FLOOR</th><th>SUITE</th><th>RSF</th><th>FLOOR PLAN</th></tr><tr><td>2nd</td><td>Suite 200</td><td>3,811</td><td>Download</td></tr><tr><td>2nd</td><td>Suite 200</td><td>3,811</td><td>Download</td></tr><tr><td>2nd</td><td>Suite 200</td><td>3,811</td><td>Download</td></tr><tr><td>54444444th</td><td>Suite 200</td><td>3,811</td><td>Download</td></tr></table>' 
-//                   }
-//                    ];
+import LeasingBrochure from './temp/leasing_brochure.pdf'
+
 
 const Leasing = ({data}) => {
   function getTabs() {
@@ -77,7 +65,10 @@ const Leasing = ({data}) => {
               through 15, and 12 feet on floors 16 through 19. The ground floor
               has a 12-foot finished ceiling.
             </Box>
-            <Button as="a" href="/download-link">
+            <Button as="a" 
+             href={LeasingBrochure} 
+             target="_blank"
+            >
               Download Brochure
             </Button>
           </Box>
@@ -86,21 +77,18 @@ const Leasing = ({data}) => {
     </Box>
     <Container>
       <Box overflowY="auto" mt={[3, 4, 6]} mb={[5, 6]}>
-
       <Tabs 
-      items={getTabs()} 
-      showMore={false}
+        items={getTabs()} 
+        showMore={false}
       />
       <div className="mobile_accordian">
           {
             data.allStrapiLeasingspaces.edges.map(es=>{
               return(
-                
                 <AccordionItem
                 mb={3}
                 title={es.node.building_name}
                 content={es.node.contents}
-                
               />
               )
             })

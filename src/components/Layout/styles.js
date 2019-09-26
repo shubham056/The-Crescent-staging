@@ -234,9 +234,9 @@ export const GlobalStyle = createGlobalStyle`
 .mobile_accordian .lgblock{width:100%;}
 .mobile_accordian .lgblock table{width:100%;}
 
-.mobile_accordian .lgblock table tr th{padding:15px 5px; text-align:left; border-bottom:1px solid #fff; color:#fff;}
-.mobile_accordian .lgblock table tr td{padding:15px 5px; text-align:left; border-bottom:1px solid #fff; color:#fff;}
-.mobile_accordian .lgblock .AccordionItem__StyledContent-iESnqx{padding-top:20px;background:#307EAF !important;}
+.mobile_accordian .lgblock table tr th{padding:15px 5px; text-align:left; border-bottom:1px solid #000; color:#000;}
+.mobile_accordian .lgblock table tr td{padding:15px 5px; text-align:left; border-bottom:1px solid #000; color:#000;}
+.mobile_accordian .lgblock .AccordionItem__StyledContent-iESnqx{padding-top:20px;}
 
 
 .mobile_accordian > .lgblock div.active{background:#307EAF !important; color:#fff;}
@@ -281,14 +281,46 @@ export const GlobalStyle = createGlobalStyle`
 }
 
 .int_search_box{visibility: hidden;}
+.about-content{padding:50px !important;}
+.about-content h2{font-size:27px; margin-bottom:15px}
+#community,#management,#sustainability{scroll-behavior: smooth;}
+.parallax_effect{background-attachment: fixed;}
+.dyne_with_us{width:100%; list-style:none; margin:0; padding:0;}
+.dyne_with_us li{width: 100%;
+  float: left;
+  padding-bottom: 10px;
+  color: #3F4D55;
+  white-space: normal;
+  word-break: break-all; padding-right:30px}
+
+.dyne_with_us li img{float:left; margin-right:5px; width:25px;}
+.dyne_with_us li a.newlink{cursor:pointer;}
+.vertical-tabs .rwt__tablist button {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #C9C9C9;
+  color: #307EAF;
+  width: 100%;
+  cursor: pointer;
+  display: inline-block;
+  border-right: 0;
+}
+.vertical-tabs .rwt__tablist button[aria-selected="true"]{color:#fff; background: #307EAF;}
+
+.vertical-tabs .rwt__tablist[aria-orientation="vertical"] .rwt__tab[aria-selected="true"]:after {
+
+    border-right: 0;
+}
+
+
+
 
 
 @media only screen and (max-width:767px){
   .map_search_field {
     width: 91%;
     left: 17px;
-    top: 569px;
-   
+    top: 569px; 
   }
   .gal_container_heading h2{margin: 25px 0 0 0; padding: 0; font-size: 29px;}
   .gal_container .gal_card{width:100%;} 

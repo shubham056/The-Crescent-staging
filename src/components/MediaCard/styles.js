@@ -16,5 +16,5 @@ export const Title = styled(Box)`
 `;
 
 export const Desc = styled(Box)`
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 `;

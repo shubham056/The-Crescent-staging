@@ -69,6 +69,23 @@ class MediaCard extends Component{
        <Img as="img" src={src} />
        <Title color="primary">{title}</Title>
        <Desc>{renderHTML(desc)}</Desc>
+       <ul className="dyne_with_us">
+         <li>
+         <img className="" src={addreddIcon}/> {address}
+         </li>
+         <li>
+         <img className=""  src={urlIcon}/> 
+         <a className="newlink" href={this.state.Modelurl} target="_blank">
+         {url}
+         </a>
+         </li>
+         <li>
+         <img className="" src={timeIcon}/> {time}
+         </li>
+         <li>
+         <img className="" src={callIcon}/> {phone_no}
+         </li>
+       </ul>
        <Button
        data-content={fulldesc} 
        data-url={url} 

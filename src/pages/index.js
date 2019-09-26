@@ -104,6 +104,7 @@ componentDidMount() {
           backgroundSize="cover"
           backgroundRepeat="no-repeat"
           backgroundPosition="center"
+          className="parallax_effect"
         >
           <Box backgroundColor="rgba(0,0,0,0.6)">
             <Container>
@@ -122,10 +123,10 @@ componentDidMount() {
                 shops and services are available.
               </Box>
             </Container>
-            <Box backgroundColor="rgba(48,126,175, 0.79)" py={[5, "90px"]}>
+            <Box  backgroundColor="rgba(48,126,175, 0.79)" py={[5, "90px"]}>
               <Container>
                 <Row>
-                  <Col col={12} xl={10} xlOffset={1}>
+                  <Col col={12} xl={12}>
                     <Row>
                       <Col xl={5}>
                         <Heading
@@ -153,6 +154,36 @@ componentDidMount() {
                               <Col col={8}>
                                 <Box href="/" as="a" fontWeight={700} color="white">
                                   The Crescent Go Green Event
+                                </Box>
+                              </Col>
+                            </Row>
+                          </Box>
+                          <Box mb={3}>
+                            <Row>
+                              <Col col={4}>Aug 19</Col>
+                              <Col col={8}>
+                                <Box href="/" as="a" fontWeight={700} color="white">
+                                American Red Cross Blood Drive
+                                </Box>
+                              </Col>
+                            </Row>
+                          </Box>
+                          <Box mb={3}>
+                            <Row>
+                              <Col col={4}>Sep 19</Col>
+                              <Col col={8}>
+                                <Box href="/" as="a" fontWeight={700} color="white">
+                                Dallas Police Choir at the Crescent
+                                </Box>
+                              </Col>
+                            </Row>
+                          </Box>
+                          <Box mb={3}>
+                            <Row>
+                              <Col col={4}>Sep 21</Col>
+                              <Col col={8}>
+                                <Box href="/" as="a" fontWeight={700} color="white">
+                                Blood Drive
                                 </Box>
                               </Col>
                             </Row>
