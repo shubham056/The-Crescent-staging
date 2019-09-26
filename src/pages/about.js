@@ -111,26 +111,29 @@ function About() {
           backgroundColor="white"
           py={5}
         >
+          
           <Button
             px={5}
             width={[1, "auto"]}
             my={2}
             mx={[0, 2, 3]}
             as="a"
-            //href="#management"
+            //href="#community"
           >
-            <AnchorLink href='#management' style={{color:"#307EAF"}}>Management</AnchorLink>
+         <AnchorLink href='#management' style={{color:"#307EAF"}}>Management</AnchorLink>
           </Button>
+
           <Button
             px={5}
             width={[1, "auto"]}
             my={2}
             mx={[0, 2, 3]}
             as="a"
-            //href="#sustainability"
+            //href="#community"
           >
-          <AnchorLink href='#sustainability' style={{color:"#307EAF"}}>Sustainability</AnchorLink>
+         <AnchorLink href='#sustainability' style={{color:"#307EAF"}}>Sustainability</AnchorLink>
           </Button>
+
           <Button
             px={5}
             width={[1, "auto"]}
@@ -141,6 +144,7 @@ function About() {
           >
          <AnchorLink href='#community' style={{color:"#307EAF"}}>Community</AnchorLink>
           </Button>
+
         </Box>
       </Container>
       <Box overflow="hidden">
