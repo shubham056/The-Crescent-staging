@@ -61,12 +61,9 @@ const Footer = ({ siteTitle, nav }) => {
             flexWrap="wrap"
           >
             <Box>
-              {/* <StyledLink color="grays.0" to="/http://www.thecrescent.com/corporate-policies">
+              <StyledLink color="grays.0" to="/corporate-policies">
                Corporate Policies
-              </StyledLink> */}
-               <a className="eeMRgc" target="_blank" href="http://www.thecrescent.com/corporate-policies"  style={{color:"#A7A9AC"}}>
-            Corporate Policies
-            </a>
+              </StyledLink>
             </Box>
             <Box>
               <Social>

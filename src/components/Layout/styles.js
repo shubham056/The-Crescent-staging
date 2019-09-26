@@ -206,7 +206,7 @@ export const GlobalStyle = createGlobalStyle`
   {
     margin-left:0; 
     margin-right:0;
-    max-width:260px;
+    max-width:312px;
     width:100%;
     text-align:center;
     font-size:16px;

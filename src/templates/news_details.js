@@ -15,7 +15,7 @@ const NewsTemplate = ({ data }) => {
     <Hero src={hero} />
      {/* <pre>{JSON.stringify(data, null, 4)}</pre> */}
      <Box py={[5, "50px"]}>
-     <Container>
+     <Container className="news-detail">
      {renderHTML(data.strapiNewscategories.content)}
      </Container>
      </Box>

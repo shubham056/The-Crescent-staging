@@ -76,17 +76,20 @@ class Header extends Component{
                       <h2> {this.state.Modeltitle}</h2>
                       <div className="content_new">{this.state.content}</div >
                       <div>
+                      
                       <Button
                           px={5}
                           width={[1, "auto"]}
                           my={2}
                           mx={[0, 3]}
                           as="a"
-                          href="#"
+                          href="http://crescentvals.com"
+                          target="_blank"
                           className="parking_button"
                         >
-                          Office Parking
+                          Validate Office Parking
                       </Button>
+                     
                       </div>
                       <div>
                       <Button
@@ -95,10 +98,11 @@ class Header extends Component{
                           my={2}
                           mx={[0, 3]}
                           as="a"
-                          href="#"
+                          href="https://ev.smsvalet.com/Web/WebSite/UserPin.aspx"
+                          target="_blank"
                           className="parking_button"
                         >
-                        Valet Parking
+                        Validate Valet Parking
                       </Button>
                       </div>
                     </div>
@@ -210,7 +214,7 @@ class Header extends Component{
       >
         <Container>
           <Box display="flex" flexWrap="wrap" justifyContent="space-between">
-            <Privacy to="/privacy-policy" color="white">
+            <Privacy to="/corporate-policies" color="white">
             Corporate Policies
             </Privacy>        
             <Box color="white">©The Crescent. All Rights Reserved 2019</Box>

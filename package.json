@@ -34,6 +34,7 @@
     "react-responsive-tabs": "^3.3.0",
     "react-instafeed": "^1.0.0",
     "react-slick": "^0.25.2",
+    "react-web-tabs": "^1.0.1",
     "styled-bootstrap-grid": "^3.0.5",
     "styled-components": "^4.3.2",
     "styled-icons": "^8.3.0",
