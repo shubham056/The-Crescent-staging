@@ -118,9 +118,10 @@ function About() {
             my={2}
             mx={[0, 2, 3]}
             as="a"
-            //href="#community"
+            href="#management"
           >
-         <AnchorLink href='#management' style={{color:"#307EAF"}}>Management</AnchorLink>
+         {/* <AnchorLink href='#management' style={{color:"#307EAF"}}>Management</AnchorLink> */}
+         Management
           </Button>
 
           <Button
@@ -129,9 +130,10 @@ function About() {
             my={2}
             mx={[0, 2, 3]}
             as="a"
-            //href="#community"
+            href="#sustainability"
           >
-         <AnchorLink href='#sustainability' style={{color:"#307EAF"}}>Sustainability</AnchorLink>
+         {/* <AnchorLink href='#sustainability' style={{color:"#307EAF"}}>Sustainability</AnchorLink> */}
+         Sustainability
           </Button>
 
           <Button
@@ -140,9 +142,10 @@ function About() {
             my={2}
             mx={[0, 2, 3]}
             as="a"
-            //href="#community"
+            href="#community"
           >
-         <AnchorLink href='#community' style={{color:"#307EAF"}}>Community</AnchorLink>
+         {/* <AnchorLink href='#community' style={{color:"#307EAF"}}>Community</AnchorLink> */}
+         Community
           </Button>
 
         </Box>
