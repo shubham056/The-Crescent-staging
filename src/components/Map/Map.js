@@ -240,7 +240,8 @@ class Map extends Component{
 						className="map_search_field"
 						    style ={ { backgroundImage: "url("+SearchIcon+")" } }
 							onPlaceSelected={ this.onPlaceSelected }
-							types={['(regions)']}
+						//	types={['(regions)']}
+							//componentRestrictions={{country: "us"}}
 						/>
 					</GoogleMap>
 				)
@@ -249,10 +250,8 @@ class Map extends Component{
 		let map;
 		if( this.props.center.lat !== undefined ) {
 			map = <div>
-				
-
 				<AsyncMap
-					googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcOUZbp3_ZctDiriJaRdh95EoJH4YHwLc&libraries=places"
+					googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true&libraries=places&callback=initAutocomplete&key=AIzaSyDcOUZbp3_ZctDiriJaRdh95EoJH4YHwLc"
 					loadingElement={
 						<div style={{ height: `100%` }} />
 					}

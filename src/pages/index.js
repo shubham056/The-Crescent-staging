@@ -208,19 +208,20 @@ componentDidMount() {
                           Concierge
                         </Heading>
                         <Box color="white">
-                        The Crescent’s concierge service is pleased to assist you with information regarding hotels, restaurants, and entertainment. They can assist you with most ticket orders and requests via phone or email. For all orders that need to be delivered to the building, please order no later than 2 p.m. on Thursdays for delivery each Friday no later than noon. Tickets must be picked up in the management office (200 Crescent Court, Suite 250) no later than 4 p.m. on Friday. The concierge accepts all major credit cards, debit cards, and company checks. For more information call (972) 770-4045.
+                        The Crescent’s concierge service is pleased to assist you with information regarding hotels, restaurants, entertainment and any other needs you may have.   They can assist you with most ticket orders and requests via phone or email. For all orders that need to be delivered to the building, please order no later than 2 p.m. on Thursdays for delivery each Friday no later than noon. Tickets must be picked up in the management office (200 Crescent Court, Suite 250) no later than 4 p.m. on Friday.
+                        <br/>
+                        The concierge accepts all major credit cards, debit cards, and company checks. For more information call (972) 770-4045, email services@conciergeconnection.org, or for the full discount ticket listing, visit <a href="http://texasconciergeconnection.com" target="_blank" style={{color:"#fff"}}>www.texasconciergeconnection.com.</a> 
                         </Box>
-                        <a href="http://texasconciergeconnection.com/" target="_blank">
                         <Button
                           color="white"
                           width={[1, "auto"]}
                           mt={4}
                           as="a"
-                          //href="/crescent-concierge"
+                          href="http://texasconciergeconnection.com"
+                          target="_blank"
                         >
-                           Crescent Concierge
+                           The Crescent Concierge
                         </Button>
-                        </a>
                       </Col>
                     </Row>
                   </Col>

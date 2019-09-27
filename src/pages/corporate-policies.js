@@ -39,6 +39,27 @@ const Leasing = ({data}) => {
             }
         </Tabs>
 
+        <Tabs defaultTab={data.allStrapiCorporatepolicies.edges[0].node.id}  className="mobile-tabs vertical-tabs">
+            <TabList>
+                {
+                    data.allStrapiCorporatepolicies.edges.map(res=>{
+                        return(
+                         <Tab tabFor={res.node.id}>{res.node.heading}</Tab>
+                        )
+                    })
+                }
+            </TabList>
+            {
+                data.allStrapiCorporatepolicies.edges.map(res=>{
+                    return(
+                        <TabPanel tabId={res.node.id}>
+                          <p className="cp_desc">{renderHTML(res.node.content)}</p>
+                        </TabPanel>
+                    )
+                })
+            }
+        </Tabs>
+
       </Box>
     </Container>
   </Layout>

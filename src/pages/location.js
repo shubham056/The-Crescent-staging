@@ -1,7 +1,6 @@
 import React from "react";
 
 import { Container } from "styled-bootstrap-grid";
-import Map from "../components/Map/Home";
 
 // Components
 import Layout from "../components/Layout";

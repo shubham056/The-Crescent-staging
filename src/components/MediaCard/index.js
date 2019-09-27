@@ -75,7 +75,7 @@ class MediaCard extends Component{
          </li>
          <li>
          <img className=""  src={urlIcon}/> 
-         <a className="newlink" href={this.state.Modelurl} target="_blank">
+         <a className="newlink" href={url} target="_blank">
          {url}
          </a>
          </li>

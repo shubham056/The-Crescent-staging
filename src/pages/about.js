@@ -120,8 +120,7 @@ function About() {
             as="a"
             href="#management"
           >
-         {/* <AnchorLink href='#management' style={{color:"#307EAF"}}>Management</AnchorLink> */}
-         Management
+         <AnchorLink href='#management' style={{color:"#307EAF"}}>Management</AnchorLink>
           </Button>
 
           <Button
@@ -132,8 +131,7 @@ function About() {
             as="a"
             href="#sustainability"
           >
-         {/* <AnchorLink href='#sustainability' style={{color:"#307EAF"}}>Sustainability</AnchorLink> */}
-         Sustainability
+         <AnchorLink href='#sustainability' style={{color:"#307EAF"}}>Sustainability</AnchorLink>
           </Button>
 
           <Button
@@ -144,8 +142,7 @@ function About() {
             as="a"
             href="#community"
           >
-         {/* <AnchorLink href='#community' style={{color:"#307EAF"}}>Community</AnchorLink> */}
-         Community
+         <AnchorLink href='#community' style={{color:"#307EAF"}}>Community</AnchorLink>
           </Button>
 
         </Box>

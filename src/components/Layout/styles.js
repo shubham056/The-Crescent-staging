@@ -174,6 +174,8 @@ export const GlobalStyle = createGlobalStyle`
     text-align: left;
     width: 24.9%;
   }
+  .RRT__panel.panel table th a,
+  .RRT__panel.panel table td a{color:#fff}
   
   .RRT__panel.panel table tr:nth-child(odd) {
     background: #307EAF;
@@ -312,11 +314,23 @@ export const GlobalStyle = createGlobalStyle`
     border-right: 0;
 }
 
+.photo_video .gallery_div .ReactModelImage{width:100%; height:300px; object-fit:cover;}
 
 
-
-
+.mobile-tabs{
+  display:none!important;
+}
+.cp_desc ul li{margin-bottom:20px;}
 @media only screen and (max-width:767px){
+  .cp_title{
+    margin-top: 90px;
+  }
+  .vertical-tabs{
+    display:none!important;
+  }
+  .mobile-tabs{
+    display:block!important;
+  }
   .map_search_field {
     width: 91%;
     left: 17px;
