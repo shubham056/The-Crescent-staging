@@ -305,9 +305,9 @@ export const GlobalStyle = createGlobalStyle`
   width: 100%;
   cursor: pointer;
   display: inline-block;
-  border-right: 0;
+  border-right: 1px solid #C9C9C9;
 }
-.vertical-tabs .rwt__tablist button[aria-selected="true"]{color:#fff; background: #307EAF;}
+.vertical-tabs .rwt__tablist button[aria-selected="true"]{color:#fff; background: #307EAF;border:1px solid #307EAF;}
 
 .vertical-tabs .rwt__tablist[aria-orientation="vertical"] .rwt__tab[aria-selected="true"]:after {
 
@@ -321,6 +321,29 @@ export const GlobalStyle = createGlobalStyle`
   display:none!important;
 }
 .cp_desc ul li{margin-bottom:20px;}
+
+
+.blue_button_new {
+	border-width: 3px;
+	border-style: solid;
+	border-color: rgb(201, 201, 201);
+	color: rgb(48, 126, 175);
+	width: 100%;
+	padding: 16px 64px;
+	margin: 8px 0px;
+	cursor: pointer;
+	display: inline-block;
+	font-weight: 700;
+	text-align: center;
+  text-decoration: none;
+  width: auto;
+    margin: 0 16px;
+}
+
+
+
+
+
 @media only screen and (max-width:767px){
   .cp_title{
     margin-top: 90px;

@@ -119,9 +119,9 @@ function About() {
             mx={[0, 2, 3]}
             as="a"
             href="#management"
-            className="blue_button_new"
           >
-         <AnchorLink href='#management' style={{color:"#307EAF"}}>Management</AnchorLink>
+         {/* <AnchorLink href='#management' style={{color:"#307EAF"}}>Management</AnchorLink> */}
+         Management
           </Button>
 
           <Button
@@ -131,9 +131,9 @@ function About() {
             mx={[0, 2, 3]}
             as="a"
             href="#sustainability"
-            className="blue_button_new"
           >
-         <AnchorLink href='#sustainability' style={{color:"#307EAF"}}>Sustainability</AnchorLink>
+         {/* <AnchorLink href='#sustainability' style={{color:"#307EAF"}}>Sustainability</AnchorLink> */}
+         Sustainability
           </Button>
 
           <Button
@@ -143,9 +143,9 @@ function About() {
             mx={[0, 2, 3]}
             as="a"
             href="#community"
-            className="blue_button_new"
           >
-         <AnchorLink href='#community' style={{color:"#307EAF"}}>Community</AnchorLink>
+         {/* <AnchorLink href='#community' style={{color:"#307EAF"}}>Community</AnchorLink> */}
+         Community
           </Button>
 
         </Box>
