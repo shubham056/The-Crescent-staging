@@ -49,6 +49,7 @@ class Header extends Component{
       width={1}
       height={this.state.open ? `100vh` : `100px`}
       position="fixed"
+      className="header_fixed_new"
       top="0"
       left="0"
       zIndex={999}

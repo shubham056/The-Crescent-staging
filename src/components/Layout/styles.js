@@ -340,7 +340,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0 16px;
 }
 
-body.modal-open .kvPPrT{position:static;}
+body.modal-open .header_fixed_new{position:static;}
 
 body.modal-open  .react-images__view-wrapper .react-images__view img{float:none; margin:0 auto;}
 
