@@ -46,7 +46,7 @@ const teams = [
     position: `Property Manager`,
     src: kristine,
     email: `klang@crescent.com`,
-    phone: `214.880.4568`,
+    phone: `214.880.4519`,
   },
   {
     name: `<span>Amanda</span> Tucker`,
@@ -57,7 +57,7 @@ const teams = [
   },
   {
     name: `<span>Tony</span> Click`,
-    position: `Leasing`,
+    position: `VP, Leasing`,
     src: tony,
     email: `tclick@crescent.com`,
     phone: `214.880.4766`,
@@ -81,7 +81,7 @@ const teams = [
     position: `Chief Engineer`,
     src: steve,
     email: `sbenbrook@crescent.com`,
-    phone: `214.880.4516`,
+    phone: `214.880.4564`,
   },
   {
     name: `<span>Robert</span> Reed`,
@@ -91,9 +91,9 @@ const teams = [
     phone: `214.880.4516`,
   },
   {
-    name: `<span>Marisa</span> Parkin`,
-    position: `General Manager`,
-    email: `Customer Relations Associate`,
+    name: `<span>Marissa</span> Parkin`,
+    position: `Customer Relations Associate`,
+    email: `mparkin@crescent.com`,
     phone: `214.880.4514`,
   },
 ];
