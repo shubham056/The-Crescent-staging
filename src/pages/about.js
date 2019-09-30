@@ -119,6 +119,7 @@ function About() {
             mx={[0, 2, 3]}
             as="a"
             href="#management"
+            className="para_button"
           >
          {/* <AnchorLink href='#management' style={{color:"#307EAF"}}>Management</AnchorLink> */}
          Management
@@ -131,6 +132,7 @@ function About() {
             mx={[0, 2, 3]}
             as="a"
             href="#sustainability"
+            className="para_button"
           >
          {/* <AnchorLink href='#sustainability' style={{color:"#307EAF"}}>Sustainability</AnchorLink> */}
          Sustainability
@@ -143,6 +145,7 @@ function About() {
             mx={[0, 2, 3]}
             as="a"
             href="#community"
+            className="para_button"
           >
          {/* <AnchorLink href='#community' style={{color:"#307EAF"}}>Community</AnchorLink> */}
          Community

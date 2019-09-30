@@ -45,7 +45,12 @@ class Gallery extends Component {
   
   render(){
     const { data } = this.props;
-    const newGallery = data.allStrapiGalleries.edges.map(res=>res.node.crescent_gallery.publicURL)
+    const newGallery = data.allStrapiGalleries.edges.map(res=>{
+      return{
+        src:res.node.crescent_gallery.publicURL
+      }
+    })
+    //console.log(newGallery)
   
     return (
       <Layout>

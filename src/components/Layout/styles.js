@@ -340,6 +340,18 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0 16px;
 }
 
+body.modal-open .kvPPrT{position:static;}
+
+body.modal-open  .react-images__view-wrapper .react-images__view img{float:none; margin:0 auto;}
+
+.para_button{
+  -webkit-transition: all .3s ease-out 0s;
+-moz-transition: all .3s ease-out 0s;
+-ms-transition: all .3s ease-out 0s;
+-o-transition: all .3s ease-out 0s;
+transition: all .3s ease-out 0s;
+}
+html{scroll-behavior: smooth; -webkit-scroll-behavior: smooth;}
 
 
 
