@@ -95,7 +95,7 @@ componentDidMount() {
                 as="a"
                 href="#announcement"
               >
-                <AnchorLink href='#announcement' style={{color:"#307EAF"}}>Announcements</AnchorLink>
+                <AnchorLink href='#announcement' style={{color:"#307EAF"}}>Announcement</AnchorLink>
               </Button>
             </Box>
           </Box>
@@ -124,7 +124,8 @@ componentDidMount() {
                 shops and services are available.
               </Box>
             </Container>
-            <Box id="announcement" backgroundColor="rgba(48,126,175, 0.79)" py={[5, "90px"]}>
+            <section id="announcement">  
+            <Box  backgroundColor="rgba(48,126,175, 0.79)" py={[5, "90px"]}>
               <Container >
                 <Row>
                   <Col col={12} xl={12}>
@@ -229,6 +230,7 @@ componentDidMount() {
                 </Row>
               </Container>
             </Box>
+            </section>
           </Box>
         </Box>
         <Video my={10} poster={videoPlace}>

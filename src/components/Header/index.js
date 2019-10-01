@@ -113,7 +113,7 @@ class Header extends Component{
         </Modal>
 
           <Link to="/">
-            <Box as="svg" width="240px" viewBox="0 0 471 55">
+            <Box as="svg" width="220px" viewBox="0 0 471 55">
               <LogoPath open={this.state.open} />
             </Box>
           </Link>

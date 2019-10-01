@@ -10,6 +10,8 @@ import Button from "../components/Button";
 import Box from "../components/Box";
 import Heading from "../components/Heading";
 import AnchorLink from 'react-anchor-link-smooth-scroll'
+import ScrollableAnchor from 'react-scrollable-anchor'
+
 
 
 // Compound
@@ -121,7 +123,6 @@ function About() {
             href="#management"
             className="para_button"
           >
-         {/* <AnchorLink href='#management' style={{color:"#307EAF"}}>Management</AnchorLink> */}
          Management
           </Button>
 
@@ -134,7 +135,6 @@ function About() {
             href="#sustainability"
             className="para_button"
           >
-         {/* <AnchorLink href='#sustainability' style={{color:"#307EAF"}}>Sustainability</AnchorLink> */}
          Sustainability
           </Button>
 
@@ -147,7 +147,6 @@ function About() {
             href="#community"
             className="para_button"
           >
-         {/* <AnchorLink href='#community' style={{color:"#307EAF"}}>Community</AnchorLink> */}
          Community
           </Button>
 
@@ -218,7 +217,7 @@ function About() {
         width={1}
         minHeight={[400, 800]}
       /> */}
-      <section id="management">
+       <ScrollableAnchor id={'management'}>
       <Container >
         <Box py={5}>
           <Heading as="h2" mb={0} fontSize={[4, "36px"]}>
@@ -227,7 +226,7 @@ function About() {
         </Box>
       </Container>
       <TeamList teams={teams} />
-      </section>
+      </ScrollableAnchor>
     <section id="sustainability">
       <Box  overflow="hidden" mb={3} >
         <ContentImage>
