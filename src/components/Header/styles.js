@@ -28,6 +28,8 @@ export const StyledParking = styled(Parking)`
 export const StyledUserTie = styled(UserTie)`
   ${color};
   width: 24px;
+  position:relative;
+  top:-5px
 `;
 
 export const Hamburger = styled.div`

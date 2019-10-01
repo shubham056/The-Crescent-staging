@@ -362,9 +362,10 @@ left: 50%;
 text-align: center;
 max-width: 300px;
 margin-left: -150px;
+top:37px;
 }
 
-.hdr_right_box{float:right; width:100%; max-width:300px;}
+.hdr_right_box{float:right; width:100%; max-width:300px; position:relative; top:6px;}
 .hdr_right_box .iconset{float:left; width:auto; margin-right:20px;}
 .hdr_right_box .humburger_icon{float:right; margin:0}
 

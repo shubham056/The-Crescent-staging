@@ -4,15 +4,16 @@ import styled from "styled-components";
 const StyledWrap = styled.div`
   align-items: center;
   cursor: pointer;
-  display: flex;
+
   user-select: none;
 `;
 
 const StyledIcon = styled.div`
-  display: flex;
+  
   font-size: 1.3rem;
-  flex: none;
   margin-right: 8px;
+  float:left;
+  width:auto;
 `;
 
 const StyledText = styled.div`
@@ -20,6 +21,8 @@ const StyledText = styled.div`
   font-weight: 700;
   line-height: 1;
   text-transform: uppercase;
+  float:left;
+  width:auto;
 `;
 
 const IconText = props => (

@@ -140,11 +140,11 @@ class Header extends Component{
             //display={["none", null, "flex"]}
             >
               <Box mr={[null, 0, null]} className="iconset">
-                <IconText>
-                  <Icon>
+                <IconText >
+                  <Icon >
                     <StyledUserTie color={this.state.open ? `white` : `primary`} />
                   </Icon>
-                  <Text>
+                  <Text >
                     <Box color={this.state.open ? `white` : `grays.0`}>
                     <a style={{color:"#A7A9AC"}} href="https://www.ng1.angusanywhere.com/Tenant/default.aspx?CompanyName=69941&WebsiteName=Main" target="_blank">
                       Customer
@@ -155,11 +155,11 @@ class Header extends Component{
                 </IconText>
               </Box>
               <Box mr={[null, 0, null]} className="iconset">
-                <IconText className="iconset">
-                  <Icon>
+                <IconText>
+                  <Icon >
                     <StyledParking color={this.state.open ? `white` : `primary`} />
                   </Icon>
-                  <Text>
+                  <Text >
                     <Box color={this.state.open ? `white` : `grays.0`}>
                     <a style={{color:"#A7A9AC"}} href="#" 
                     //target="_blank"
