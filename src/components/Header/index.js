@@ -60,10 +60,10 @@ class Header extends Component{
     >
       <Container>
         <Box
-          display="flex"
+          // display="flex"
           alignItems="center"
           justifyContent="space-between"
-          pt="30px"
+          py="30px"
         >
 
        <Modal open={openModel} onClose={this.onCloseModal} className="mod">
@@ -117,7 +117,10 @@ class Header extends Component{
               <LogoPath open={this.state.open} />
             </Box>
           </Link>
-          <Box display={["none", null, "block"]}>
+          <Box className="social_box_new" 
+          // display={["none", null, "block"]}
+
+          >
             <Social>
               <SocialItem href="https://www.facebook.com/TheCrescentDallas/" target="_blank">
                 <StyledFacebookF color={this.state.open ? `white` : `primary`} />
@@ -130,9 +133,13 @@ class Header extends Component{
               </SocialItem>
             </Social>
           </Box>
-          <Box display="flex">
-            <Box display={["none", null, "flex"]}>
-              <Box mr={[null, 0, 4]}>
+          <Box className="hdr_right_box"  
+           //display="flex"
+           >
+            <Box
+            //display={["none", null, "flex"]}
+            >
+              <Box mr={[null, 0, null]} className="iconset">
                 <IconText>
                   <Icon>
                     <StyledUserTie color={this.state.open ? `white` : `primary`} />
@@ -147,8 +154,8 @@ class Header extends Component{
                   </Text>
                 </IconText>
               </Box>
-              <Box mr={[null, 0, 5]}>
-                <IconText>
+              <Box mr={[null, 0, null]} className="iconset">
+                <IconText className="iconset">
                   <Icon>
                     <StyledParking color={this.state.open ? `white` : `primary`} />
                   </Icon>
@@ -170,7 +177,7 @@ class Header extends Component{
                 </IconText>
               </Box>
             </Box>
-            <Hamburger open={this.state.open} onClick={() => this.setState({open:!this.state.open})}>
+            <Hamburger className="humburger_icon" open={this.state.open} onClick={() => this.setState({open:!this.state.open})}>
               <div />
             </Hamburger>
           </Box>

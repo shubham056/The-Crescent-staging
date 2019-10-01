@@ -92,7 +92,7 @@ componentDidMount() {
                 my={2}
                 mx={[0, 3]}
                 as="a"
-                href="/announcement"
+                href="#announcement"
               >
                 Announcement
               </Button>
@@ -123,8 +123,8 @@ componentDidMount() {
                 shops and services are available.
               </Box>
             </Container>
-            <Box  backgroundColor="rgba(48,126,175, 0.79)" py={[5, "90px"]}>
-              <Container>
+            <Box id="announcement" backgroundColor="rgba(48,126,175, 0.79)" py={[5, "90px"]}>
+              <Container >
                 <Row>
                   <Col col={12} xl={12}>
                     <Row>

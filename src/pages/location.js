@@ -14,7 +14,7 @@ import Box from "../components/Box";
 import MapForm from "../views/MapForm";
 
 // Temporary assets
-import hero from "./temp/hero_location.jpg";
+import hero from "./temp/location.jpg";
 
 function Location() {
   return (
@@ -29,14 +29,7 @@ function Location() {
           textAlign="center"
           fontWeight={700}
         >
-          The Crescent is Dallas’ premiere office and retail complex. In one
-          prestigious location, the finest office spaces, hotel accommodations,
-          spa, restaurants, retail shops and services are available. Unique
-          indoor and outdoor gathering spaces can be found throughout The
-          Courtyard for relaxing or meeting with friends and colleagues. Along
-          with a walkable, neighborhood-friendly Uptown location, The Crescent
-          provides convenient access to downtown Dallas, Klyde Warren Park,
-          Dallas Arts District and Katy Trail.
+          The Crescent is a landmark in Dallas' high-profile Uptown neighborhood bringing its premier office, retail and restaurant experience to a walkable environment filled with high-rise residential living, world-class restaurants and entertainment, luxury hotels and a wide range of retail amenities. The Uptown location provides a perfect live-work-play environment. The location also provides convenient access to downtown Dallas, Klyde Warren Park, and the Dallas Arts District.
         </Box>
       </Container>
       <MapForm />

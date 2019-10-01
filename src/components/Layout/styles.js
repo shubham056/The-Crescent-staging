@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-
+import NextImg from '../../pages/temp/nxt.png'
 export const GlobalStyle = createGlobalStyle`
   *,
   *::before,
@@ -351,12 +351,29 @@ body.modal-open  .react-images__view-wrapper .react-images__view img{float:none;
   -o-transition: all .7s ease-out 0s;
   transition: all .7s ease-out 0s;
 }
-html{scroll-behavior: smooth; -webkit-scroll-behavior: smooth;}
+.scroll_container{scroll-behavior: smooth; -webkit-scroll-behavior: smooth; overflow-y:scroll; -webkit-overflow-y:scroll;}
 
+.social_box_new{
+
+  display: inline-block;
+width: 100%;
+position: absolute;
+left: 50%;
+text-align: center;
+max-width: 300px;
+margin-left: -150px;
+}
+
+.hdr_right_box{float:right; width:100%; max-width:300px;}
+.hdr_right_box .iconset{float:left; width:auto; margin-right:20px;}
+.hdr_right_box .humburger_icon{float:right; margin:0}
 
 
 
 @media only screen and (max-width:767px){
+  .social_box_new{display:none;}
+  .hdr_right_box{ max-width:50px;}
+  .hdr_right_box .iconset{display:none;}
   .cp_title{
     margin-top: 90px;
   }

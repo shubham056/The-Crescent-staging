@@ -2,12 +2,12 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledSocial = styled.div`
-  display: flex;
+
 `;
 
 const StyledSocialItem = styled.a`
   align-items: center;
-  display: flex;
+  
   justify-content: center;
   margin: 0 10px;
   width: 44px;
