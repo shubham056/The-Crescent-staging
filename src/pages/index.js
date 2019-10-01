@@ -95,7 +95,7 @@ componentDidMount() {
                 as="a"
                 href="#announcement"
               >
-                <AnchorLink href='#announcement' style={{color:"#307EAF"}}>Announcement</AnchorLink>
+                <AnchorLink href='#announcement' style={{color:"#307EAF"}}>Announcements</AnchorLink>
               </Button>
             </Box>
           </Box>
