@@ -121,8 +121,8 @@ function About() {
             href="#management"
             className="para_button"
           >
-         <AnchorLink href='#management' style={{color:"#307EAF"}}>Management</AnchorLink>
-         {/* Management */}
+         {/* <AnchorLink href='#management' style={{color:"#307EAF"}}>Management</AnchorLink> */}
+         Management
           </Button>
 
           <Button
@@ -134,8 +134,8 @@ function About() {
             href="#sustainability"
             className="para_button"
           >
-         <AnchorLink href='#sustainability' style={{color:"#307EAF"}}>Sustainability</AnchorLink>
-         {/* Sustainability */}
+         {/* <AnchorLink href='#sustainability' style={{color:"#307EAF"}}>Sustainability</AnchorLink> */}
+         Sustainability
           </Button>
 
           <Button
@@ -147,8 +147,8 @@ function About() {
             href="#community"
             className="para_button"
           >
-         <AnchorLink href='#community' style={{color:"#307EAF"}}>Community</AnchorLink>
-         {/* Community */}
+         {/* <AnchorLink href='#community' style={{color:"#307EAF"}}>Community</AnchorLink> */}
+         Community
           </Button>
 
         </Box>
