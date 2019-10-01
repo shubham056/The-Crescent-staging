@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "styled-bootstrap-grid";
 import axios from 'axios';
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 
 
@@ -94,7 +95,7 @@ componentDidMount() {
                 as="a"
                 href="#announcement"
               >
-                Announcement
+                <AnchorLink href='#announcement' style={{color:"#307EAF"}}>Announcement</AnchorLink>
               </Button>
             </Box>
           </Box>
