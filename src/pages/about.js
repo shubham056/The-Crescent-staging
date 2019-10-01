@@ -121,8 +121,8 @@ function About() {
             href="#management"
             className="para_button"
           >
-         {/* <AnchorLink href='#management' style={{color:"#307EAF"}}>Management</AnchorLink> */}
-         Management
+         <AnchorLink href='#management' style={{color:"#307EAF"}}>Management</AnchorLink>
+         {/* Management */}
           </Button>
 
           <Button
@@ -134,8 +134,8 @@ function About() {
             href="#sustainability"
             className="para_button"
           >
-         {/* <AnchorLink href='#sustainability' style={{color:"#307EAF"}}>Sustainability</AnchorLink> */}
-         Sustainability
+         <AnchorLink href='#sustainability' style={{color:"#307EAF"}}>Sustainability</AnchorLink>
+         {/* Sustainability */}
           </Button>
 
           <Button
@@ -147,8 +147,8 @@ function About() {
             href="#community"
             className="para_button"
           >
-         {/* <AnchorLink href='#community' style={{color:"#307EAF"}}>Community</AnchorLink> */}
-         Community
+         <AnchorLink href='#community' style={{color:"#307EAF"}}>Community</AnchorLink>
+         {/* Community */}
           </Button>
 
         </Box>
@@ -218,8 +218,7 @@ function About() {
         width={1}
         minHeight={[400, 800]}
       /> */}
-      <div className="scroll_container">
-      <div id="management">
+      <section id="management">
       <Container >
         <Box py={5}>
           <Heading as="h2" mb={0} fontSize={[4, "36px"]}>
@@ -228,11 +227,9 @@ function About() {
         </Box>
       </Container>
       <TeamList teams={teams} />
-      </div>
-      
-     
-      
-      <Box id="sustainability" overflow="hidden" mb={3} >
+      </section>
+    <section id="sustainability">
+      <Box  overflow="hidden" mb={3} >
         <ContentImage>
           <Content className="about-content">
             <Heading as="h2" fontSize={[4, "36px"]}>
@@ -263,7 +260,9 @@ function About() {
           <Image style={{backgroundPosition:"right center"}} src={thinkSustainable} />
         </ContentImage>
       </Box>
-      <Box overflow="hidden" id="community">
+      </section>
+      <section id="community">
+      <Box overflow="hidden" >
         <ContentImage>
           <Image src={thankYou} />
           <Content className="about-content">
@@ -296,8 +295,8 @@ function About() {
           </Content>
         </ContentImage>
       </Box>
-   
-      </div>
+      </section>
+      
       <Box
         bg="primary"
         my={2}
