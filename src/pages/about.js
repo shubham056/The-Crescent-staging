@@ -104,7 +104,7 @@ function About() {
     <Layout>
       <SEO title="About" />
       <Hero src={hero} />
-      <Container>
+      <Container className="prd_box">
         <Box
           display="flex"
           flexWrap="wrap"
@@ -122,10 +122,8 @@ function About() {
             href="#management"
             
           >
-            <AnchorLink className="para_button" href='#management'>Management</AnchorLink>
-         
+        Management
           </Button>
-
           <Button
             px={5}
             width={[1, "auto"]}
@@ -133,10 +131,8 @@ function About() {
             mx={[0, 2, 3]}
             as="a"
             href="#sustainability"
-           
           >
-         
-         <AnchorLink  className="para_button" href='#sustainability'>Sustainability</AnchorLink>
+        Sustainability
           </Button>
 
           <Button
@@ -148,8 +144,7 @@ function About() {
             href="#community"
             
           >
-         <AnchorLink className="para_button" href='#community'>Community</AnchorLink>
-         
+        Community
           </Button>
 
         </Box>
@@ -162,19 +157,7 @@ function About() {
               The <span>Crescent</span>
             </Heading>
             <Box>
-              The Crescent®, heralded as a celebration of art, history and
-              architecture, is the most iconic building in Dallas. Designed by
-              world renowned architect Philip Johnson along with John Burgee and
-              Dallas-based Shepherd & Boyd, The Crescent’s facade creates a
-              timeless design of quality and outstanding visibility from any
-              point in the Dallas Central Business District. Known as the
-              financial center of the southwest, the office and retail complex
-              is the centerpiece of the Uptown Dallas/Turtle Creek Class AA
-              office market. Amenities include twelve restaurants, luxury
-              shopping, an art gallery, two salons, a spa and fitness center.
-              The Crescent® is the only Uptown office building with a dual-feed
-              power supply and the first office complex in Dallas to install
-              innovative destination-dispatch elevators.
+            The Crescent® heralded as a celebration of art, history, and architecture, is the most iconic building in Dallas. Designed by world-renowned architect Philip Johnson along with John Burgee and Dallas-based Shepherd & Boyd, The Crescent’s facade creates a timeless design of quality and outstanding visibility from any point in the Dallas Central Business District. Known as the financial center of the southwest, the office and retail complex is the centerpiece of the Uptown Dallas/Turtle Creek Class AA office market. Amenities include twelve restaurants, luxury shopping, an art gallery, two salons, a spa, and a fitness center. The Crescent® is the only Uptown office building with a dual-feed power supply and the first office complex in Dallas to install innovative destination-dispatch elevators.
             </Box>
             <Button mt={4} as="a" 
             href={DownloadBrochure}
@@ -238,23 +221,10 @@ function About() {
             </Heading>
             <Box>
               <p>
-                The Crescent® has been awarded LEED Silver certification from
-                the U.S. Green Building Council (USGBC) under the Existing
-                Buildings rating system. With a current score of 81, The
-                Crescent has been an Energy Star labeled building since 2008.
-                Factors such as building automation systems, lighting controls,
-                and chilled water thermal storage have contributed to a
-                significant decrease in the overall energy consumption. The
-                replacement of all water closets with water-conserving, low-flow
-                models, coupled with the implementation of comprehensive green
-                cleaning and recycling programs, are just a few examples of The
-                Crescent’s leadership in sustainability practices.
+              The Crescent® has been awarded LEED Silver certification from the U.S. Green Building Council (USGBC) under the Existing Buildings rating system. With a current score of 81, The Crescent has been an Energy Star labeled building since 2008. Factors such as building automation systems, lighting controls, and chilled water thermal storage have contributed to a significant decrease in overall energy consumption. The replacement of all water closets with water-conserving, low-flow models, coupled with the implementation of comprehensive green cleaning and recycling programs, are just a few examples of The Crescent’s leadership in sustainability practices.
               </p>
               <p>
-                The Crescent® is focused on providing a green building
-                environment for our customers in order to demonstrate our
-                commitment to becoming better stewards of the environment within
-                the commercial real estate market.
+              The Crescent® is focused on providing a green building environment for our customers to demonstrate our commitment to becoming better stewards of the environment within the commercial real estate market.
               </p>
             </Box>
           </Content>
@@ -272,26 +242,20 @@ function About() {
             </Heading>
             <Box>
               <p>
-                The Crescent recognizes the importance of promoting healthy
-                communities in which to live and work. The heart of Crescent’s
-                commitment to the community is FACES of Change® a unique
-                adopt-a-school program Crescent began in 1997. Through this
-                program, Crescent properties are partnered with local elementary
-                schools that serve at-risk students and families. FACES of
-                Change partnerships bring Crescent employees, customers, and
-                business partners together to provide volunteer time, financial
-                and in-kind gifts to partner schools. Since its inception, FACES
-                of Change has established more than 80 successful
-                business-to-school partnerships that have impacted the lives of
-                over 30,000 children nationwide.
+              The Crescent recognizes the importance of promoting healthy communities in which to live and work. The heart of Crescent’s commitment to the community is FACES of Change® a unique adopt-a-school program Crescent began in 1997. Through this program, Crescent properties are partnered with local elementary schools that serve at-risk students and families. FACES of Change partnerships bring Crescent employees, customers, and business partners together to provide volunteer time, financial and in-kind gifts to partner schools. Since its inception, FACES of Change has established more than 80 successful business-to-school partnerships that have impacted the lives of over 30,000 children nationwide.
               </p>
               <p>
-                To learn more about The Crescent’s FACES of Change partnership
-                with Paul L. Dunbar Learning Center or to volunteer, please
-                contact Kristine Lang at{" "}
+              To learn more about The Crescent’s FACES of Change partnership with Paul L. Dunbar Learning Center or to volunteer, please contact Kristine Lang at {" "}
                 <a href="tel:214.880.4568">214.880.4568</a> or{" "}
                 <a href="mailto: klang@crescent.com">klang@crescent.com</a>.
               </p>
+
+              <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+              <input type="hidden" name="cmd" value="_s-xclick" />
+              <input type="hidden" name="hosted_button_id" value="JWHDCX7BWNXLQ" />
+              <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+              <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+              </form>
             </Box>
           </Content>
         </ContentImage>

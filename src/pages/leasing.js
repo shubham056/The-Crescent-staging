@@ -52,18 +52,7 @@ const Leasing = ({data}) => {
               The <span>Perfect place</span> to office
             </Heading>
             <Box mb={[3, "40px"]}>
-              Set in a crescent-shaped contour, The Crescent® is designed to
-              allow customers to travel from building to building while
-              remaining within a unified complex. The three towers are
-              contiguous and offer a standard 22,000 square foot floor plan with
-              an elevator core in each tower. Customers can expand vertically,
-              as in traditional buildings, or horizontally, using each building
-              as a 22,000 square foot module. Standard bay depths are 43-44 feet
-              from the outside wall to the interior core. The planning module is
-              10 feet allowing floors to be arranged to accommodate offices up
-              to 20 feet deep. Finished ceiling heights are 9 feet on floors 2
-              through 15, and 12 feet on floors 16 through 19. The ground floor
-              has a 12-foot finished ceiling.
+            Set in a crescent-shaped contour, The Crescent® was designed to allow customers to travel from building to building while remaining within a unified complex. The three towers are contiguous and offer a standard 22,000 square foot floor plan with an elevator core in each tower. Customers can expand vertically, as in traditional buildings, or horizontally, using each building as a 22,000 square foot module. Standard bay depths are 43-44 feet from the outside wall to the interior core. The planning module is 10 feet allowing floors to be arranged to accommodate offices up to 20 feet deep. Finished ceiling heights are 9 feet on floors 2 through 15, and 12 feet on floors 16 through 19. The ground floor has a 12-foot finished ceiling.
             </Box>
             <Button as="a" 
              href={LeasingBrochure} 

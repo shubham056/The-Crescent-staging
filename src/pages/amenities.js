@@ -78,14 +78,7 @@ const Amenities = ({data}) => {
         textAlign="center"
         fontWeight={700}
       >
-        The Crescent is Dallas’ premiere office and retail complex. In one
-        prestigious location, the finest office spaces, hotel accommodations,
-        spa, restaurants, retail shops and services are available. Unique indoor
-        and outdoor gathering spaces can be found throughout The Courtyard for
-        relaxing or meeting with friends and colleagues. Along with a walkable,
-        neighborhood-friendly Uptown location, The Crescent provides convenient
-        access to downtown Dallas, Klyde Warren Park, Dallas Arts District and
-        Katy Trail.
+        The Crescent is Dallas’ premiere office and retail complex. In one prestigious location, the finest office spaces, hotel accommodations, spa, restaurants, retail shops, and services are available. Unique indoor and outdoor gathering spaces can be found throughout The Courtyard for relaxing or meeting with friends and colleagues. Along with a walkable, neighborhood-friendly Uptown location, The Crescent provides convenient access to downtown Dallas, Klyde Warren Park, Dallas Arts District, and Katy Trail.
       </Box>
       <Heading fontSize={[4, "36px"]} pb={[5, "100px"]}>
         <span>Dine</span> With Us
@@ -115,12 +108,7 @@ const Amenities = ({data}) => {
       <Box maxWidth={1024} color="white">
         <Box as="h2" mt={0} fontSize={[4, "36px"]}>CONCIERGE</Box>
         <Box as="p">
-        The Crescent’s concierge service is pleased to assist you with information regarding hotels, restaurants, entertainment and any other needs you may have.   They can assist you with most ticket orders and requests via phone or email. For all orders that need to be delivered to the building, please order no later than 2 p.m. on Thursdays for delivery each Friday no later than noon. Tickets must be picked up in the management office (200 Crescent Court, Suite 250) no later than 4 p.m. on Friday.
-        <br/>
-        The concierge accepts all major credit cards, debit cards, and company checks. For more information call (972) 770-4045, email services@conciergeconnection.org, or for the full discount ticket listing, visit <a href="http://texasconciergeconnection.com" target="_blank" style={{color:"#fff"}}>www.texasconciergeconnection.com.</a> 
-          {/* <Box as="a" color="white" href="http://texasconciergeconnection.com/">
-            www.texasconciergeconnection.com
-          </Box>. */}
+        The Crescent’s concierge service is pleased to assist you with information regarding hotels, restaurants, and entertainment. They can assist you with most ticket orders and requests via phone or email. For all orders that need to be delivered to the building, please order no later than 2 p.m. on Thursday for delivery each Friday by noon. Tickets must be picked up in the management office, 200 Crescent Court, Suite 250, by 4 p.m. on Friday. The concierge accepts all major credit cards, debit cards, and company checks. For more information, call 972.770.4045.
           <p></p>
           <Button
           color="white"

@@ -384,20 +384,7 @@ top:37px;
 }
 
 .fix_accordian_items{ padding-right:20px;}
-.para_button{border-width: 3px;
-  border-style: solid;
-  border-color: rgb(201, 201, 201);
-  color: rgb(48, 126, 175);
-  width: 100%;
-  padding: 16px 64px;
-  margin: 8px 0px;
-      margin-right: 16px;
-      margin-left: 16px;
-  cursor: pointer;
-  display: inline-block;
-  font-weight: 700;
-  text-align: center;
-  text-decoration: none;}
+
 
 @media only screen and (max-width:767px){
   .date_formate{width:26%!important;}
