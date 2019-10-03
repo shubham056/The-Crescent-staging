@@ -138,6 +138,20 @@ function About() {
             <AnchorLink href='#sustainability'>Sustainability</AnchorLink>
           </Button>
 
+          
+
+          <Button
+            px={5}
+            width={[1, "auto"]}
+            my={2}
+            mx={[0, 2, 3]}
+            as="a"
+            //href="#sustainability"
+            className="para_button"
+          >
+          <AnchorLink href='#community'>Sustainability</AnchorLink>
+          </Button>
+
           <Button
             px={5}
             width={[1, "auto"]}
