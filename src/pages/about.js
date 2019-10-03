@@ -120,9 +120,10 @@ function About() {
             mx={[0, 2, 3]}
             as="a"
             href="#management"
-            className="para_button"
+            
           >
-         Management
+            <AnchorLink className="para_button" href='#management'>Management</AnchorLink>
+         
           </Button>
 
           <Button
@@ -132,9 +133,10 @@ function About() {
             mx={[0, 2, 3]}
             as="a"
             href="#sustainability"
-            className="para_button"
+           
           >
-         Sustainability
+         
+         <AnchorLink  className="para_button" href='#sustainability'>Sustainability</AnchorLink>
           </Button>
 
           <Button
@@ -144,9 +146,10 @@ function About() {
             mx={[0, 2, 3]}
             as="a"
             href="#community"
-            className="para_button"
+            
           >
-         Community
+         <AnchorLink className="para_button" href='#community'>Community</AnchorLink>
+         
           </Button>
 
         </Box>
