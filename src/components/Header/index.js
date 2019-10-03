@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import { Container, Row, Col } from "styled-bootstrap-grid";
 import Modal from "react-responsive-modal";
 import Hero from "../../components/Hero";
-import hero from "../../pages/temp/component.png";
+import hero from "../../pages/temp/component.jpg";
 import Button from "../../components/Button";
 
 import Box from "../Box";
@@ -67,10 +67,10 @@ class Header extends Component{
         >
 
        <Modal open={openModel} onClose={this.onCloseModal} className="mod">
-        <Container>
+        <Container style={{maxWidth:"100%"}}>
               <Row>
-                <Col col={6} md={6} >
-                <Hero src={hero} className="map_img" />
+                <Col col={6} md={6} className="map_box_container" >
+                <img src={hero} className="map_img" />
                 </Col>
                   <Col col={6} md={6} className="text-area">
                     <div className="inner-txt">

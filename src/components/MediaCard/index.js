@@ -27,6 +27,7 @@ class MediaCard extends Component{
     Modeltime:null,
     Modeltitle:null,
     Modelimage:null,
+    ModelwebsiteName:null,
   };
   onOpenModal = (ev) => {
     this.setState({ open: true });
@@ -37,6 +38,7 @@ class MediaCard extends Component{
     this.setState({Modeladdress: ev.currentTarget.dataset.address})
     this.setState({Modeltitle: ev.currentTarget.dataset.title})
     this.setState({Modelimage: ev.currentTarget.dataset.image})
+    this.setState({ModelwebsiteName: ev.currentTarget.dataset.website_name})
 
   };
   onCloseModal = () => {
@@ -44,7 +46,7 @@ class MediaCard extends Component{
   };
   render(){
     const { open } = this.state;
-    const { src,title,desc,address,time,url,phone_no,fulldesc,fulltitle,...rest} = this.props;
+    const { src,title,desc,address,time,url,phone_no,fulldesc,fulltitle,website_name,...rest} = this.props;
     return(
       <Box {...rest} >
       <Modal open={open} onClose={this.onCloseModal} className="mod">
@@ -58,7 +60,7 @@ class MediaCard extends Component{
               <h2> {this.state.Modeltitle}</h2>
               <div className="content_new">{this.state.content}</div >
               <p className="spacing_none"><img className="small_icons" src={addreddIcon}/> {this.state.Modeladdress}</p>
-              <p className="spacing_none"><img className="small_icons"  src={urlIcon}/> <a className="newlink" href={this.state.Modelurl} target="_blank">{this.state.Modelurl}</a></p>
+              <p className="spacing_none"><img className="small_icons"  src={urlIcon}/> <a className="newlink" href={this.state.Modelurl} target="_blank">{this.state.ModelwebsiteName}</a></p>
               <p className="spacing_none"><img className="small_icons" src={timeIcon}/> {this.state.Modeltime}</p>
               <p className="spacing_none"><img className="small_icons" src={callIcon}/> {this.state.Modelphoneno}</p>
               </div>
@@ -68,27 +70,27 @@ class MediaCard extends Component{
         </Modal>
        <Img as="img" src={src} />
        <Title color="primary">{title}</Title>
-       <Desc>{renderHTML(desc)}</Desc>
+       {/* <Desc>{renderHTML(desc)}</Desc> */}
        <ul className="dyne_with_us">
          <li>
-         <img className="" src={addreddIcon}/> {address}
+         <img className="" src={addreddIcon}/> 
+         <a href={"https://www.google.com/maps/place/"+address} target="_blank" className="aminites_link_color">DIRECTIONS</a>
          </li>
          <li>
          <img className=""  src={urlIcon}/> 
-         <a className="newlink" href={url} target="_blank">
-         {url}
+         <a className="newlink" href={url} target="_blank" className="aminites_link_color">
+          WEBSITE
          </a>
          </li>
          <li>
-         <img className="" src={timeIcon}/> {time}
-         </li>
-         <li>
-         <img className="" src={callIcon}/> {phone_no}
+         <img className="" src={callIcon}/> 
+         <a href={"tel:"+phone_no} className="aminites_link_color">CALL US</a>
          </li>
        </ul>
        <Button
        data-content={fulldesc} 
        data-url={url} 
+       data-website_name={website_name} 
        data-phoneno={phone_no} 
        data-time={time} 
        data-address={address} 

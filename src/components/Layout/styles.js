@@ -285,7 +285,11 @@ export const GlobalStyle = createGlobalStyle`
 .int_search_box{visibility: hidden;}
 .about-content{padding:50px !important;}
 .about-content h2{font-size:27px; margin-bottom:15px}
-#community,#management,#sustainability{scroll-behavior: smooth;}
+
+
+html{scroll-behavior: smooth; overflow-y:scroll; height:calc(100vh -100px;)}
+
+
 .parallax_effect{background-attachment: fixed;}
 .dyne_with_us{width:100%; list-style:none; margin:0; padding:0;}
 .dyne_with_us li{width: 100%;
@@ -369,9 +373,29 @@ top:37px;
 .hdr_right_box .iconset{float:left; width:auto; margin-right:20px;}
 .hdr_right_box .humburger_icon{float:right; margin:0}
 
+.map_box_container{ background:#c9c9c9;}
+.map_box_container img{width:100%; height:auto;}
+
+.aminites_link_color{
+  color:#307EAF
+}
+.line{
+  border-top:1px solid #C9C9C9;
+  padding-bottom:50px;
+}
+
+.fix_accordian_items{ padding-right:20px;}
 
 
 @media only screen and (max-width:767px){
+  .date_formate{width:26%!important;}
+.title_formate{width:74% !important;}
+  .cal_nav_list ul{ margin-bottom:30px;}
+  .cal_nav_list ul li {
+    display: inline-block;
+    width: auto;
+    margin: 0 10px 10px;
+}
   .social_box_new{display:none;}
   .hdr_right_box{ max-width:50px;}
   .hdr_right_box .iconset{display:none;}

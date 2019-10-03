@@ -47,21 +47,25 @@ const Amenities = ({data}) => {
           desc:res.node.description,
           address:res.node.address,
           time:res.node.time,
+          website_name:res.node.website_name,
           url:res.node.website_url,
           phone_no:res.node.phone_no,
     };
   })
-  const RetailAndHospitality = data.allStrapiDinewithuses.edges.map(res=>{
+  const RetailAndHospitality = data.allStrapiRetalandhospitalities.edges.map(res=>{
     return{
           src:res.node.image.publicURL,
           title:res.node.heading,
           desc:res.node.description,
           address:res.node.address,
           time:res.node.time,
+          website_name:res.node.website_name,
           url:res.node.website_url,
           phone_no:res.node.phone_no,
     };
   })
+  //console.log(DineWithUs)
+  console.log(DineWithUs)
  return(
   <Layout>
     <SEO title="Home" />
@@ -136,7 +140,6 @@ const Amenities = ({data}) => {
 }
 
 export default Amenities;
-
 export const PageQuery = graphql`
 {
   allStrapiDinewithuses {
@@ -148,6 +151,7 @@ export const PageQuery = graphql`
         address
         phone_no
         time
+        website_name
         website_url
         image {
           publicURL
@@ -155,16 +159,21 @@ export const PageQuery = graphql`
       }
     }
   }
-  strapiRetalandhospitalities {
-    id
-    heading
-    description
-    address
-    phone_no
-    time
-    website_url   
-    image {
-      publicURL
+  allStrapiRetalandhospitalities {
+    edges {
+      node {
+        id
+        heading
+        description
+        address
+        phone_no
+        time
+        website_name
+        website_url
+        image {
+          publicURL
+        }
+      }
     }
   }
 }

@@ -55,7 +55,7 @@ componentDidMount() {
     const annoucementCategory = data.allStrapiAnnouncaterogies.edges.map(res=>{
       return{
         id: res.node.id,
-        date: moment(res.node.date).tz('America/Chicago').format('MMM D'),
+        date: res.node.date,
         title: res.node.title,
         url: res.node.url,
         content:res.node.content,
@@ -259,7 +259,7 @@ export const query = graphql`
       edges {
         node {
           id
-          date
+          date(formatString: "MM/DD/YYYY")
           title
           url
           content

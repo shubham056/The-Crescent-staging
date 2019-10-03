@@ -37,7 +37,7 @@ function AccordionItem({ date, title, content, ...rest }) {
       <Box width="20%" className='smblock'>
         <Date date={date} />
       </Box>
-      <Box width="80%" className='lgblock'>
+      <Box width="80%" className='lgblock' className="fix_accordian_items">
         <Title active={active} title={title} />
         <Content active={active} content={content} />
       </Box>

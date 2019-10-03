@@ -32,7 +32,7 @@ function News({data}) {
   const annoucementCategory = data.allStrapiAnnouncaterogies.edges.map(res=>{
     return{
       id: res.node.id,
-      date: moment(res.node.date).tz('America/Chicago').format('MMM D'),
+      date: res.node.date,
       title: res.node.title,
       url: res.node.url,
       content:res.node.content,
@@ -41,11 +41,11 @@ function News({data}) {
       image:res.node.image.publicURL
 }
   });
-  const awardCategory = data.strapiNews.Awards.awardscategories.map(res=>{
+  const awardCategory = data.allStrapiAwardscategories.edges.map(res=>{
     return{
-      date: moment(res.date).tz('America/Chicago').format('MMM D'),
-      title: res.title,
-      content: res.content,
+      date: res.node.date,
+      title: res.node.title,
+      content: res.node.content,
 }
   });
   return (
@@ -53,9 +53,9 @@ function News({data}) {
       <SEO title="News" />
       <Hero src={hero} />
       <Box py={[5, "100px"]}>
-        <Container>
+      <Container>
           <Row>
-            <Col col={3} md={2} xl={1}>
+            <Col col={12} md={2} xl={1} className="cal_nav_list">
               <NavList
                 height="100%"
                 borderRight="1px solid"
@@ -63,7 +63,7 @@ function News({data}) {
                 mb={[5, 0]}
               />
             </Col>
-            <Col col={9} md={10} xl={11}>
+            <Col col={12} md={10} xl={11}>
               <Box pl={[0, 0, 3]}>
                 <Row>
                   <Col xl={7}>
@@ -76,21 +76,23 @@ function News({data}) {
                     />
                   </Col>
                   <Col xl={5}>
-                    <Heading lineHeight="1" fontSize={[4, "36px"]} mb={4}>
+                  <Heading lineHeight="1" fontSize={[4, "36px"]} mb={4}>
+                      <span>Awards</span>
+                    </Heading>
+                    <AwardsList
+                    awards={awardCategory}
+                    />
+                  </Col>
+                  <Col xl={7}>
+                    <div className='line'></div>
+                  <Heading lineHeight="1" fontSize={[4, "36px"]} mb={4}>
                       <span>Announcements</span>
                     </Heading>
                     <AnnouncementList
                       mb={5}
                       announcements={annoucementCategory}
                     />
-                  </Col>
-                  <Col xl={7}>
-                    <Heading lineHeight="1" fontSize={[4, "36px"]} mb={4}>
-                      <span>Awards</span>
-                    </Heading>
-                    <AwardsList 
-                    awards={awardCategory}
-                    />
+                   
                   </Col>
                 </Row>
               </Box>
@@ -105,7 +107,7 @@ function News({data}) {
 export default News;
 export const PageQuery = graphql`
   {
-    strapiNews(year: {eq: "2017"}) {
+    strapiNews(year: {eq: "2011"}) {
       News {
         year
         newscategories {
@@ -116,11 +118,13 @@ export const PageQuery = graphql`
           content
         }
       }
-      Awards {
-        id
-        awardscategories {
+     
+    }
+   allStrapiAwardscategories {
+      edges {
+        node {
           id
-          date
+          date(formatString: "Y")
           title
           url
           content
@@ -131,7 +135,7 @@ export const PageQuery = graphql`
       edges {
         node {
           id
-          date
+          date(formatString: "MM/DD/YYYY")
           title
           url
           content
