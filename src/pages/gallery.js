@@ -59,7 +59,7 @@ class Gallery extends Component {
         <Container>
           <Box py={[5, "100px"]}>
             <Heading fontSize={[4, "36px"]}>
-              <span>Photo & Video</span> GAllery
+              <span>Photo</span> GAllery
             </Heading>
           </Box>
         </Container>

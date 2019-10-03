@@ -13,6 +13,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 
 
+
 // Compound
 import ContentImage, { Content, Image } from "../compound/ContentImage";
 
@@ -119,10 +120,10 @@ function About() {
             my={2}
             mx={[0, 2, 3]}
             as="a"
-            href="#management"
+            //href="#management"
             className="para_button"
           >
-         Management
+             <AnchorLink href='#management'>Management</AnchorLink>
           </Button>
 
           <Button
@@ -131,10 +132,10 @@ function About() {
             my={2}
             mx={[0, 2, 3]}
             as="a"
-            href="#sustainability"
+            //href="#sustainability"
             className="para_button"
           >
-         Sustainability
+            <AnchorLink href='#sustainability'>Sustainability</AnchorLink>
           </Button>
 
           <Button
@@ -143,10 +144,10 @@ function About() {
             my={2}
             mx={[0, 2, 3]}
             as="a"
-            href="#community"
+            //href="#community"
             className="para_button"
           >
-         Community
+          <AnchorLink href='#community'>Community</AnchorLink>
           </Button>
 
         </Box>
