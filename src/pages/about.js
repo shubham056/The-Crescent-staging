@@ -10,7 +10,7 @@ import Button from "../components/Button";
 import Box from "../components/Box";
 import Heading from "../components/Heading";
 import AnchorLink from 'react-anchor-link-smooth-scroll'
-import ScrollableAnchor from 'react-scrollable-anchor'
+
 
 
 
