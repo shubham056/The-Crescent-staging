@@ -13,7 +13,6 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 
 
-
 // Compound
 import ContentImage, { Content, Image } from "../compound/ContentImage";
 

@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import { Container, Row, Col } from "styled-bootstrap-grid";
 import axios from 'axios';
 import AnchorLink from 'react-anchor-link-smooth-scroll'
-
+import { graphql } from "gatsby";
+import moment from 'moment';
+import timezone from 'moment-timezone';
 
 
 import Layout from "../components/Layout";
@@ -14,6 +16,7 @@ import Button from "../components/Button";
 import { Video, Source } from "../components/Video";
 import BGImage from "../components/BGImage";
 // import instafeed from 'react-instafeed'
+import AnnouncementList from "../views/AnnouncementsListHome";
 
 // Temporary
 import bgPlace from "./temp/bg_place.jpg";
@@ -47,6 +50,21 @@ componentDidMount() {
           }
 
   render(){
+    const { data } = this.props;
+    console.log(data.allStrapiAnnouncaterogies.edges)
+    const annoucementCategory = data.allStrapiAnnouncaterogies.edges.map(res=>{
+      return{
+        id: res.node.id,
+        date: moment(res.node.date).tz('America/Chicago').format('MMM D'),
+        title: res.node.title,
+        url: res.node.url,
+        content:res.node.content,
+        time:res.node.time,
+        address:res.node.address,
+        image:res.node.image.publicURL
+  }
+    });
+    console.log(annoucementCategory)
   return(
       <Layout>
         <SEO title="Home" />
@@ -139,58 +157,11 @@ componentDidMount() {
                         >
                           Announcements
                         </Heading>
-                        <Box color="white" mb={5}>
-                          <Box mb={3}>
-                            <Row>
-                              <Col col={4}>Jul 16</Col>
-                              <Col col={8}>
-                                <Box href="/" as="a" fontWeight={700} color="white">
-                                  Professional Head Shot Event
-                                </Box>
-                              </Col>
-                            </Row>
-                          </Box>
-                          <Box mb={3}>
-                            <Row>
-                              <Col col={4}>Jul 19</Col>
-                              <Col col={8}>
-                                <Box href="/" as="a" fontWeight={700} color="white">
-                                  The Crescent Go Green Event
-                                </Box>
-                              </Col>
-                            </Row>
-                          </Box>
-                          <Box mb={3}>
-                            <Row>
-                              <Col col={4}>Aug 19</Col>
-                              <Col col={8}>
-                                <Box href="/" as="a" fontWeight={700} color="white">
-                                American Red Cross Blood Drive
-                                </Box>
-                              </Col>
-                            </Row>
-                          </Box>
-                          <Box mb={3}>
-                            <Row>
-                              <Col col={4}>Sep 19</Col>
-                              <Col col={8}>
-                                <Box href="/" as="a" fontWeight={700} color="white">
-                                Dallas Police Choir at the Crescent
-                                </Box>
-                              </Col>
-                            </Row>
-                          </Box>
-                          <Box mb={3}>
-                            <Row>
-                              <Col col={4}>Sep 21</Col>
-                              <Col col={8}>
-                                <Box href="/" as="a" fontWeight={700} color="white">
-                                Blood Drive
-                                </Box>
-                              </Col>
-                            </Row>
-                          </Box>
-                        </Box>
+                        <AnnouncementList
+                             color="white"
+                             mb={5}
+                            announcements={annoucementCategory}
+                       />
                       </Col>
                       <Col xl={1}>
                         <Box
@@ -282,3 +253,24 @@ componentDidMount() {
 }
 
 export default Index;
+export const query = graphql`
+  {
+    allStrapiAnnouncaterogies {
+      edges {
+        node {
+          id
+          date
+          title
+          url
+          content
+          time
+          address
+          image {
+            id
+            publicURL
+          }
+        }
+      }
+    }
+  }
+`

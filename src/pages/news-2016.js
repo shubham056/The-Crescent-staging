@@ -29,15 +29,16 @@ function News({data}) {
       url: res.url,
 }
   });
-  const annoucementCategory = data.strapiNews.Announcements.announcaterogies.map(res=>{
+  const annoucementCategory = data.allStrapiAnnouncaterogies.edges.map(res=>{
     return{
-      id: res.id,
-      date: moment(res.date).tz('America/Chicago').format('MMM D'),
-      title: res.title,
-      url: res.url,
-      content:res.content,
-      time:res.time,
-      address:res.address,
+      id: res.node.id,
+      date: moment(res.node.date).tz('America/Chicago').format('MMM D'),
+      title: res.node.title,
+      url: res.node.url,
+      content:res.node.content,
+      time:res.node.time,
+      address:res.node.address,
+      image:res.node.image.publicURL
 }
   });
   const awardCategory = data.strapiNews.Awards.awardscategories.map(res=>{
@@ -104,7 +105,7 @@ function News({data}) {
 export default News;
 export const PageQuery = graphql`
   {
-    strapiNews(year: {eq: "2016"}) {
+    strapiNews(year: {eq: "2017"}) {
       News {
         year
         newscategories {
@@ -115,18 +116,6 @@ export const PageQuery = graphql`
           content
         }
       }
-      Announcements {
-        id
-        announcaterogies {
-          id
-          date
-          title
-          url
-          content
-          time
-          address
-        }
-      }
       Awards {
         id
         awardscategories {
@@ -135,6 +124,23 @@ export const PageQuery = graphql`
           title
           url
           content
+        }
+      }
+    }
+    allStrapiAnnouncaterogies {
+      edges {
+        node {
+          id
+          date
+          title
+          url
+          content
+          time
+          address
+          image {
+            id
+            publicURL
+          }
         }
       }
     }
