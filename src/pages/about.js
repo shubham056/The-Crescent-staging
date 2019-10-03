@@ -217,7 +217,7 @@ function About() {
         width={1}
         minHeight={[400, 800]}
       /> */}
-       <ScrollableAnchor id={'management'}>
+       <section id='management'>
       <Container >
         <Box py={5}>
           <Heading as="h2" mb={0} fontSize={[4, "36px"]}>
@@ -226,7 +226,7 @@ function About() {
         </Box>
       </Container>
       <TeamList teams={teams} />
-      </ScrollableAnchor>
+      </section>
     <section id="sustainability">
       <Box  overflow="hidden" mb={3} >
         <ContentImage>
