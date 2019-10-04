@@ -391,7 +391,7 @@ top:37px;
   border-style: solid;
   border-color: #C9C9C9;
   color: #307EAF;
-  width: 100%;
+  width: auto;
   padding-left: 64px;
   padding-right: 64px;
  margin:8px;
@@ -411,6 +411,7 @@ top:37px;
 }
 
 @media only screen and (max-width:767px){
+  .prd_box a:nth-child(2){margin:8px 0;}
   .mob_menu_list{width:100%;}
   .mob_menu_list li{margin:9px 0;}
   .mob_menu_list li a{font-size:20px;}
