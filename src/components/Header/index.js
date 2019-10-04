@@ -35,7 +35,6 @@ class Header extends Component{
     this.setState({ openModel: true });
     this.setState({content: ev.currentTarget.dataset.content})
     this.setState({Modeltitle: ev.currentTarget.dataset.title})
-
   };
 
   onCloseModal = () => {
@@ -216,14 +215,19 @@ class Header extends Component{
         </Item>
         <div className="mobil_bottom_menu">
        
-        <Item>
-          <A fontSize={[4, "36px"]} to="">
+        <Item style={{textAlign:"center"}}>
+          <a style={{color:"#fff",fontWeight:"bold"}} href="https://www.ng1.angusanywhere.com/Tenant/default.aspx?CompanyName=69941&WebsiteName=Main" target="_blank">
             Customer Service
-          </A>
+          </a>
         </Item>
 
         <Item>
-          <A fontSize={[4, "36px"]} to="/news-2017">
+          <A fontSize={[4, "36px"]} 
+          data-title={"PARKING AT THE CRESCENT"} 
+          data-content={"The Crescent® is a unique, luxury, mixed-use development consisting of 1.1 million gross square feet of office space and 165,000 gross square feet in the atrium.  In one prestigious location, the finest office spaces, hotel accommodations, restaurants, spa, retail shops and services are available."} 
+          data-parkingButtons={true}
+          onClick={this.onOpenModal}
+          >
             Parking Validation
           </A>
         </Item>
