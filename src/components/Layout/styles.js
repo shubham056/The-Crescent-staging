@@ -387,6 +387,24 @@ top:37px;
 
 
 
+.mgt_btn{border-width: 3px;
+  border-style: solid;
+  border-color: #C9C9C9;
+  color: #307EAF;
+  width: 100%;
+  padding-left: 64px;
+  padding-right: 64px;
+ margin:8px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 700;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 
 .mobil_bottom_menu{
   display:none;
@@ -394,6 +412,8 @@ top:37px;
 
 @media only screen and (max-width:767px){
   .mob_menu_list{width:100%;}
+  .mob_menu_list li{margin:9px 0;}
+  .mob_menu_list li a{font-size:20px;}
   .mobil_bottom_menu{
     display:block; border-top:1px solid #C9C9C9;
   }
