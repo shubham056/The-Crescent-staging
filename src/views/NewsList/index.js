@@ -11,9 +11,9 @@ function NewsList({ news, ...rest }) {
     <Box {...rest}>
       {news.map(({ id, date, title, url }) => (
         <NewsItem key={id} mb={3}>
-             <Date><Link to={`news/Newscategories_${id}`}>{date}</Link> </Date>
+             <Date className="date_formate"><Link to={`news/Newscategories_${id}`}>{date}</Link> </Date>
           {/* <Title color="secondary" as="a" href={url}> */}
-          <Title color="secondary" as="a" href={url}>
+          <Title className="title_formate" color="secondary" as="a" href={url}>
             {/* <Icon color="primary">
               <FileDownload size="1rem" />
             </Icon> */}
