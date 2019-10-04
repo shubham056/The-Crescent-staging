@@ -64,8 +64,7 @@ const Amenities = ({data}) => {
           phone_no:res.node.phone_no,
     };
   })
-  //console.log(DineWithUs)
-  console.log(DineWithUs)
+  console.log(RetailAndHospitality)
  return(
   <Layout>
     <SEO title="Home" />

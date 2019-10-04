@@ -411,7 +411,7 @@ top:37px;
 }
 
 @media only screen and (max-width:767px){
-  .prd_box a:nth-child(2){margin:8px 0;}
+  .prd_box a:nth-child(2){margin:8px 0;width: 100%;}
   .mob_menu_list{width:100%;}
   .mob_menu_list li{margin:9px 0;}
   .mob_menu_list li a{font-size:20px;}
