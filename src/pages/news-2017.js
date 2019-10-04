@@ -109,7 +109,7 @@ function News({data}) {
 export default News;
 
 export const PageQuery = graphql`
-  {
+  { 
     strapiNews(year: {eq: "2017"}) {
       News {
         year
