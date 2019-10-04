@@ -387,7 +387,7 @@ top:37px;
 
 
 
-.mgt_btn{border-width: 3px;
+.prd_box a:nth-child(2){border-width: 3px;
   border-style: solid;
   border-color: #C9C9C9;
   color: #307EAF;
