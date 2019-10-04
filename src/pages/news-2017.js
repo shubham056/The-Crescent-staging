@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "styled-bootstrap-grid";
 import { graphql } from "gatsby";
 import moment from 'moment';
-//import timezone from 'moment-timezone';
+import timezone from 'moment-timezone';
 
 // Components
 import Layout from "../components/Layout";
@@ -21,7 +21,6 @@ import AwardsList from "../views/AwardsList";
 import hero from "./temp/hero_news.jpg";
 
 function News({data}) {
-  console.log(data.allStrapiAwardscategories)
   const newsCategory = data.strapiNews.News.newscategories.map(res=>{
     return{
       id: res.id,
@@ -49,13 +48,12 @@ function News({data}) {
       content: res.node.content,
 }
   });
- console.log(awardCategory);
   return (
     <Layout>
       <SEO title="News" />
       <Hero src={hero} />
       <Box py={[5, "100px"]}>
-        <Container>
+         <Container>
           <Row>
             <Col col={12} md={2} xl={1} className="cal_nav_list">
               <NavList
@@ -107,9 +105,8 @@ function News({data}) {
 }
 
 export default News;
-
 export const PageQuery = graphql`
-  { 
+  {
     strapiNews(year: {eq: "2017"}) {
       News {
         year
