@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "styled-bootstrap-grid";
 import { graphql } from "gatsby";
 import moment from 'moment';
-import timezone from 'moment-timezone';
+//import timezone from 'moment-timezone';
 
 // Components
 import Layout from "../components/Layout";

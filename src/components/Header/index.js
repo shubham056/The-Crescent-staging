@@ -183,7 +183,7 @@ class Header extends Component{
           </Box>
         </Box>
       </Container>
-      <Menu open={this.state.open}>
+      <Menu open={this.state.open} className="mob_menu_list">
         <Item>
           <A fontSize={[4, "36px"]} to="/about">
             About
@@ -214,6 +214,37 @@ class Header extends Component{
             News
           </A>
         </Item>
+        <div className="mobil_bottom_menu">
+       
+        <Item>
+          <A fontSize={[4, "36px"]} to="">
+            Customer Service
+          </A>
+        </Item>
+
+        <Item>
+          <A fontSize={[4, "36px"]} to="/news-2017">
+            Parking Validation
+          </A>
+        </Item>
+
+
+        <Item>
+        <Box className="social_box_new" >
+            <Social>
+              <SocialItem href="https://www.facebook.com/TheCrescentDallas/" target="_blank">
+                <StyledFacebookF color={this.state.open ? `white` : `primary`} />
+              </SocialItem>
+              <SocialItem href="https://www.instagram.com/thecrescentdallas" target="_blank">
+                <StyledInstagram color={this.state.open ? `white` : `primary`} />
+              </SocialItem>
+              <SocialItem href="https://vimeo.com/channels/thecrescent" target="_blank">
+                <StyledVimeoV color={this.state.open ? `white` : `primary`} />
+              </SocialItem>
+            </Social>
+          </Box>
+        </Item>
+        </div>
       </Menu>
       <Box
         px={2}

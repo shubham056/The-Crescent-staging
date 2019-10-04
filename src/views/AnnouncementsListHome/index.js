@@ -62,6 +62,7 @@ class AnnouncementList extends Component{
         {this.props.announcements.map(({ id, date, title, url,content,time,address,image }) => (
         <NewsItem key={id} mb={3}>
           <Date
+            className="date_formate"
             style={{cursor:"pointer",color:"#FFFFFF"}}
             data-content={content} 
             data-date={date} 
@@ -74,6 +75,7 @@ class AnnouncementList extends Component{
           {date}
           </Date>
           <Title 
+            className="title_formate"
             color="white" 
             as="a" 
             style={{cursor:"pointer"}}

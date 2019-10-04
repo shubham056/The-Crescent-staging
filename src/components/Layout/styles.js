@@ -386,7 +386,25 @@ top:37px;
 .fix_accordian_items{ padding-right:20px;}
 
 
+
+
+.mobil_bottom_menu{
+  display:none;
+}
+
 @media only screen and (max-width:767px){
+  .mob_menu_list{width:100%;}
+  .mobil_bottom_menu{
+    display:block; border-top:1px solid #C9C9C9;
+  }
+
+  .mobil_bottom_menu .social_box_new{ display: block;
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;}
+
+
   .date_formate{width:26%!important;}
 .title_formate{width:74% !important;}
   .cal_nav_list ul{ margin-bottom:30px;}
