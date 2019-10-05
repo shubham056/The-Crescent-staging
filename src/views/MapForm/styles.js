@@ -14,6 +14,17 @@ export const Input = styled.input`
   width: 100%;
 `;
 
+export const SearchResult = styled(Search)`
+  width: 100%;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  -webkit-box-shadow: 0px 6px 12px 0px rgba(50, 50, 50, 0.5);
+  -moz-box-shadow: 0px 6px 12px 0px rgba(50, 50, 50, 0.5);
+  box-shadow: 0px 6px 12px 0px rgba(50, 50, 50, 0.5);
+
+`;
+
 export const SearchIcon = styled(Search)`
   color: ${props => props.theme.colors.primary};
   position: absolute;

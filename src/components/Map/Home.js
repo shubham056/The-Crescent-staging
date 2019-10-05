@@ -8,9 +8,10 @@ class Home extends Component {
 			<div>
 				<Map
 					google={this.props.google}
-					center={{lat: 32.7943373, lng: -96.8040556}}
+					center={{lat: 32.793560, lng: -96.804039}}
 					height='480px'
 					zoom={16}
+					propertyName='The Crescent'
 				/>
 			</div>
 		);

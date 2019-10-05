@@ -15,6 +15,7 @@ class Map extends Component{
 			city: '',
 			area: '',
 			state: '',
+			propertyName:this.props.propertyName,
 			mapPosition: {
 				lat: this.props.center.lat,
 				lng: this.props.center.lng
@@ -44,6 +45,9 @@ class Map extends Component{
 					area: ( area ) ? area : '',
 					city: ( city ) ? city : '',
 					state: ( state ) ? state : '',
+				} )
+				this.setState( {
+					propertyName:this.props.propertyName
 				} )
 			},
 			error => {
@@ -170,6 +174,10 @@ class Map extends Component{
 				lng: lngValue
 			},
 		})
+		this.setState( {
+					propertyName:undefined
+				} )
+		this.props.sendData(place);
 	};
 
 
@@ -184,10 +192,11 @@ class Map extends Component{
 						{/* InfoWindow on top of marker */}
 						<InfoWindow
 							onClose={this.onInfoWindowClose}
-							position={{ lat: ( this.state.markerPosition.lat + 0.0018 ), lng: this.state.markerPosition.lng }}
+							position={{ lat: ( this.state.markerPosition.lat + 0.001 ), lng: this.state.markerPosition.lng }}
 						>
 							<div>
-								<span style={{ padding: 0, margin: 0 }}>{ this.state.address }</span>
+								<b>{this.state.propertyName!=undefined?this.state.propertyName:''}</b>
+								<p style={{ padding: 0, margin: 0 }}>{ this.state.address }</p>
 							</div>
 						</InfoWindow>
 						{/*Marker*/}
