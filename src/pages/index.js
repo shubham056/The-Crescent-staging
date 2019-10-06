@@ -27,6 +27,7 @@ import social2 from "./temp/social_2.png";
 import social3 from "./temp/social_3.png";
 import social4 from "./temp/social_4.png";
 import hero from "./temp/home_hero.jpg";
+import annpdf from "./temp/CC_Standard_1019.pdf";
 
 class Index extends Component {
   handleClick() {
@@ -37,6 +38,7 @@ class Index extends Component {
     };
     
 componentDidMount() {
+  console.log(annpdf);
             let token = '3291087116.1677ed0.56579a3cefb642f98bf16d2555f4270b';
             let num_photos = 10;
             axios.get('https://api.instagram.com/v1/users/self/media/recent/?access_token=' + token + '&count=' + num_photos)
@@ -51,7 +53,7 @@ componentDidMount() {
 
   render(){
     const { data } = this.props;
-    console.log(data.allStrapiAnnouncaterogies.edges)
+    //console.log(data.allStrapiAnnouncaterogies.edges)
     const annoucementCategory = data.allStrapiAnnouncaterogies.edges.map(res=>{
       return{
         id: res.node.id,
@@ -64,7 +66,7 @@ componentDidMount() {
         image:res.node.image.publicURL
   }
     });
-    console.log(annoucementCategory)
+
   return(
       <Layout>
         <SEO title="Home" />
@@ -135,7 +137,7 @@ componentDidMount() {
                 fontWeight={700}
                 py={[5, 6]}
               >
-                The Crescent® is a unique, luxury, mixed-use development consisting of 1.1 million gross square feet of office space and 165,000 gross square feet in The Courtyard. In one prestigious location, the finest office spaces, hotel accommodations, restaurants, spa, retail shops, and services are available.
+                The Crescent is a unique, luxury, mixed-use development consisting of 1.1 million gross square feet of office space and 165,000 gross square feet in The Courtyard. In one prestigious location, the finest office spaces, hotel accommodations, restaurants, spa, retail shops, and services are available.
               </Box>
             </Container>
             <section id="announcement">  
@@ -158,6 +160,24 @@ componentDidMount() {
                              mb={5}
                             announcements={annoucementCategory}
                        />
+
+                       <Heading
+                          color="white"
+                          fontSize={[4, "36px"]}
+                          mb={[3, "40px"]}
+                          lineHeight={1}
+                        >
+                        <br/>
+                          Quick Links
+                        </Heading>
+                        <Box
+                          textAlign="left"
+                          color="white"
+                        >
+                        <a href={annpdf}>October Concierge Connection Newsletter Available Now!</a>
+
+                        <br/>Stay up to date on our latest news & events by signing up for our weekly email. Email <a href="mailto:TC.Customer@crescent.com">TC.Customer@crescent.com </a>or call 214.880.4500 to sign up.
+                      </Box>
                       </Col>
                       <Col xl={1}>
                         <Box
@@ -211,7 +231,6 @@ componentDidMount() {
           {
             (this.state.images.length>0 ? 
               this.state.images.map(res=>{
-                console.log(res)
                 return(
                 <a key={res.id} href={res.link} target="_blank" className="gal_card">
                    <BGImage className="gal_card_img" key={res.id} 
