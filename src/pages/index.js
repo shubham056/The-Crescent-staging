@@ -53,7 +53,7 @@ componentDidMount() {
 
   render(){
     const { data } = this.props;
-    //console.log(data.allStrapiAnnouncaterogies.edges)
+    // console.log(data.allStrapiAnnouncaterogies.edges)
     const annoucementCategory = data.allStrapiAnnouncaterogies.edges.map(res=>{
       return{
         id: res.node.id,
@@ -140,7 +140,7 @@ componentDidMount() {
                 The Crescent is a unique, luxury, mixed-use development consisting of 1.1 million gross square feet of office space and 165,000 gross square feet in The Courtyard. In one prestigious location, the finest office spaces, hotel accommodations, restaurants, spa, retail shops, and services are available.
               </Box>
             </Container>
-            <section id="announcement">  
+            <section style={{padding: '80px 0'}} id="announcement">  
             <Box  backgroundColor="rgba(48,126,175, 0.79)" py={[5, "90px"]}>
               <Container >
                 <Row>
@@ -168,15 +168,15 @@ componentDidMount() {
                           lineHeight={1}
                         >
                         <br/>
-                          Quick Links
+                         
                         </Heading>
                         <Box
                           textAlign="left"
                           color="white"
                         >
-                        <a href={annpdf}>October Concierge Connection Newsletter Available Now!</a>
+                        <a href={annpdf}></a>
 
-                        <br/>Stay up to date on our latest news & events by signing up for our weekly email. Email <a href="mailto:TC.Customer@crescent.com">TC.Customer@crescent.com </a>or call 214.880.4500 to sign up.
+                        <br/>Stay up to date on our latest news & events by signing up for our weekly email. Email <a style={{color: 'white'}} href="mailto:TC.Customer@crescent.com">TC.Customer@crescent.com </a>or call 214.880.4500 to sign up.
                       </Box>
                       </Col>
                       <Col xl={1}>
@@ -218,7 +218,7 @@ componentDidMount() {
             </section>
           </Box>
         </Box>
-        <Video my={10} poster={videoPlace}>
+        <Video my={10} poster={videoPlace} style={{display:'flow-root'}}>
           <Source src={videoSample} type="video/mp4" />
         </Video>
         <Container className="gal_container_heading">
