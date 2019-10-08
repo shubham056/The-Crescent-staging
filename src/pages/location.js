@@ -29,7 +29,7 @@ function Location() {
           textAlign="center"
           fontWeight={700}
         >
-         The Crescent® is a landmark in Dallas' high-profile Uptown neighborhood bringing its premier office, retail, and restaurant experience to a walkable environment filled with high-rise residential living, world-class restaurants, and entertainment, luxury hotels and a wide range of retail amenities. The Uptown location provides a perfect live-work-play environment. The location also provides convenient access to downtown Dallas, Klyde Warren Park, and the Dallas Arts District.
+         The Crescent is a landmark in Dallas' high-profile Uptown neighborhood bringing its premier office, retail, and restaurant experience to a walkable environment filled with high-rise residential living, world-class restaurants, and entertainment, luxury hotels and a wide range of retail amenities. The Uptown location provides a perfect live-work-play environment. The location also provides convenient access to downtown Dallas, Klyde Warren Park, and the Dallas Arts District.
         </Box>
       </Container>
       <MapForm />
