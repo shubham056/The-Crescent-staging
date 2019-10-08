@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import { Container, Row, Col } from "styled-bootstrap-grid";
 import Modal from "react-responsive-modal";
 import Hero from "../../components/Hero";
-import hero from "../../pages/temp/component.jpg";
+import hero from "../../pages/temp/parking_val.jpg";
 import Button from "../../components/Button";
 
 import Box from "../Box";
