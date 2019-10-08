@@ -11,6 +11,7 @@ import NewsItem, { Date, Title } from "../../components/NewsItem";
 import addreddIcon from '../../pages/temp/1.png'
 import timeIcon from '../../pages/temp/2.jpg'
 import calIcon from '../../pages/temp/3.png'
+import announcepdf from '../../pages/temp/announcepdf.pdf'
 
 class AnnouncementList extends Component{
   state = {
@@ -49,7 +50,7 @@ class AnnouncementList extends Component{
               <Col col={6} md={6} className="text-area">
                 <div className="inner-txt">
                   <h2> {this.state.Modeltitle}</h2>
-                  <div className="content_new">{this.state.content}</div >
+                  <div className="content_new">{this.state.content} Email <a href="emailto:tccustomer@crescent.com">tccustomer@crescent.com</a> to sign up and click <a href={announcepdf}>here</a> to view class times.</div >
                   <p className="spacing_none"><img className="small_icons" src={addreddIcon}/> {this.state.Modeladdress}</p>
                   <p className="spacing_none"><img className="small_icons" src={calIcon}/> {this.state.Modeldate}</p>
                   <p className="spacing_none"><img className="small_icons" src={timeIcon}/> {this.state.Modeltime}</p>
