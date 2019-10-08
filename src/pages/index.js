@@ -28,6 +28,7 @@ import social3 from "./temp/social_3.png";
 import social4 from "./temp/social_4.png";
 import hero from "./temp/home_hero.jpg";
 import annpdf from "./temp/CC_Standard_1019.pdf";
+import resCss from "./temp/responsive.css";
 
 class Index extends Component {
   handleClick() {
@@ -161,22 +162,13 @@ componentDidMount() {
                             announcements={annoucementCategory}
                        />
 
-                       <Heading
-                          color="white"
-                          fontSize={[4, "36px"]}
-                          mb={[3, "40px"]}
-                          lineHeight={1}
-                        >
-                        <br/>
-                         
-                        </Heading>
                         <Box
                           textAlign="left"
                           color="white"
                         >
                         <a href={annpdf}></a>
 
-                        <br/>Stay up to date on our latest news & events by signing up for our weekly email. Email <a style={{color: 'white'}} href="mailto:TC.Customer@crescent.com">TC.Customer@crescent.com </a>or call 214.880.4500 to sign up.
+                        <br/>Stay up to date on our latest news & events by signing up for our weekly email. Email <a style={{color: 'white'}} href="mailto:tccustomer@crescent.com">tccustomer@crescent.com</a> or call 214.880.4500 to sign up.
                       </Box>
                       </Col>
                       <Col xl={1}>
@@ -187,7 +179,7 @@ componentDidMount() {
                           height="100%"
                         />
                       </Col>
-                      <Col xl={6}>
+                      <Col xl={6} className="title_new">
                         <Heading
                           color="white"
                           fontSize={[4, "36px"]}
