@@ -32,6 +32,10 @@ import rick from "./temp/rick_flusche.png";
 import doug from "./temp/doug_cavaness.png";
 import steve from "./temp/steve_benbrook.png";
 import robert from "./temp/robert_reed.png";
+import marissa from "./temp/marissa.jpg";
+import shelly from "./temp/shelly.jpg";
+import collen from "./temp/collen.jpg";
+import juile from "./temp/jullie.jpg";
 
 // Temporary data
 import DownloadBrochure from '../pages/temp/DownloadBrochure.pdf'
@@ -39,6 +43,7 @@ const teams = [
   {
     name: `<span>Julie</span> Young`,
     position: `General Manager`,
+    src: juile,
     email: `jyoung@crescent.com`,
     phone: `214.880.4508`,
   },
@@ -94,8 +99,23 @@ const teams = [
   {
     name: `<span>Marissa</span> Parkin`,
     position: `Customer Relations Associate`,
+    src:marissa,
     email: `mparkin@crescent.com`,
     phone: `214.880.4514`,
+  },
+  {
+    name: `<span>Shelley </span> Richardson`,
+    position: `Administrative Assistant`,
+    src:shelly,
+    email: `srichardson@crescent.com`,
+    phone: `214.880.4519`,
+  },
+   {
+    name: `<span>Colleen</span> Cooper`,
+    position: `Administrative Assistant`,
+    src:collen,
+    email: `ccooper@crescent.com`,
+    phone: `214.880.4500`,
   },
 ];
 
@@ -122,7 +142,7 @@ function About() {
             //href="#management"
             
           >
-       <AnchorLink className="mgt_btn" style={{color:"#307EAF"}} href='#management'>Management</AnchorLink>
+       <AnchorLink className="mgt_btn" offset='100' style={{color:"#307EAF"}} href='#management'>Management</AnchorLink>
           </Button>
           <Button
             px={5}
@@ -132,7 +152,7 @@ function About() {
             as="a"
             href="#sustainability"
           >
-       <AnchorLink className="sus_btn" style={{color:"#307EAF"}} href='#sustainability'>Sustainability</AnchorLink>
+       <AnchorLink className="sus_btn" offset='100' style={{color:"#307EAF"}} href='#sustainability'>Sustainability</AnchorLink>
           </Button>
 
           <Button
@@ -144,7 +164,7 @@ function About() {
             href="#community"
             
           >
-        <AnchorLink className="cm_btn" style={{color:"#307EAF"}} href='#community'>Community</AnchorLink>
+        <AnchorLink className="cm_btn" offset='100' style={{color:"#307EAF"}} href='#community'>Community</AnchorLink>
           </Button>
 
         </Box>
@@ -221,7 +241,7 @@ function About() {
             </Heading>
             <Box>
               <p>
-              The Crescent® has been awarded LEED Silver certification from the U.S. Green Building Council (USGBC) under the Existing Buildings rating system. With a current score of 81, The Crescent has been an Energy Star labeled building since 2008. Factors such as building automation systems, lighting controls, and chilled water thermal storage have contributed to a significant decrease in overall energy consumption. The replacement of all water closets with water-conserving, low-flow models, coupled with the implementation of comprehensive green cleaning and recycling programs, are just a few examples of The Crescent’s leadership in sustainability practices.
+              The Crescent has been awarded LEED Silver certification from the U.S. Green Building Council (USGBC) under the Existing Buildings rating system. With a current score of 81, The Crescent has been an Energy Star labeled building since 2008. Factors such as building automation systems, lighting controls, and chilled water thermal storage have contributed to a significant decrease in overall energy consumption. The replacement of all water closets with water-conserving, low-flow models, coupled with the implementation of comprehensive green cleaning and recycling programs, are just a few examples of The Crescent’s leadership in sustainability practices.
               </p>
               <p>
               The Crescent® is focused on providing a green building environment for our customers to demonstrate our commitment to becoming better stewards of the environment within the commercial real estate market.
@@ -242,7 +262,7 @@ function About() {
             </Heading>
             <Box>
               <p>
-              The Crescent recognizes the importance of promoting healthy communities in which to live and work. The heart of Crescent’s commitment to the community is FACES of Change® a unique adopt-a-school program Crescent began in 1997. Through this program, Crescent properties are partnered with local elementary schools that serve at-risk students and families. FACES of Change partnerships bring Crescent employees, customers, and business partners together to provide volunteer time, financial and in-kind gifts to partner schools. Since its inception, FACES of Change has established more than 80 successful business-to-school partnerships that have impacted the lives of over 30,000 children nationwide.
+              The Crescent® recognizes the importance of promoting healthy communities in which to live and work. The heart of Crescent’s commitment to the community is FACES of Change® a unique adopt-a-school program Crescent began in 1997. Through this program, Crescent properties are partnered with local elementary schools that serve at-risk students and families. FACES of Change partnerships bring Crescent employees, customers, and business partners together to provide volunteer time, financial and in-kind gifts to partner schools. Since its inception, FACES of Change has established more than 80 successful business-to-school partnerships that have impacted the lives of over 30,000 children nationwide.
               </p>
               <p>
               To learn more about The Crescent’s FACES of Change partnership with Paul L. Dunbar Learning Center or to volunteer, please contact Kristine Lang at {" "}
